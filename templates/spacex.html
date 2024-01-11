@@ -1,0 +1,22 @@
+<!-- spacex.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX Launches</title>
+</head>
+<body>
+    <h1>SpaceX Launches</h1>
+    <ul>
+        {% for launch in spacex_launches %}
+            <li>
+                <p>Name: {{ launch.name }}</p>
+                <p>Date (UTC): {{ launch.date_utc }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
