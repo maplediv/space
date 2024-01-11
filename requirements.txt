@@ -1,4 +1,6 @@
+
 Flask==2.0.1
 Werkzeug==2.0.2
 requests==2.26.0
-Flask-DebugToolbar==0.14.0  # Use the correct version
+Flask-DebugToolbar==0.14.0
+gunicorn==20.1.0
