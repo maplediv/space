@@ -1,22 +1,97 @@
-<!-- spacex.html -->
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpaceX Launches</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Space</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
 </head>
+
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <!-- Left-aligned image -->
+            <a class="navbar-brand" href="#">
+                <img src="{{ url_for('static', filename='rocket_launch.png') }}" alt="Logo" width="30" height="30"
+                    class="d-inline-block align-top">
+                SPACE
+            </a>
+
+            <!-- Navbar toggler for small screens -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar items (right-aligned) -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/apod">APOD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/spacex">SpaceX</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/neo">NEO</a>
+                    </li>
+                </ul>
+
+                <!-- Dropdown for small screens -->
+                <div class="dropdown d-lg-none">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="/">Home</a>
+                        <a class="dropdown-item" href="/apod">APOD</a>
+                        <a class="dropdown-item" href="/spacex">SpaceX</a>
+                        <a class="dropdown-item" href="/neo">NEO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Your HTML structure -->
+
     <h1>SpaceX Launches</h1>
     <ul>
         {% for launch in spacex_launches %}
             <li>
-                <p>Name: {{ launch.name }}</p>
-                <p>Date (UTC): {{ launch.date_utc }}</p>
+                <p>Name: {{ launch['name'] }}</p>
+                <p>Date (UTC): {{ launch['date_utc'] }}</p>
             </li>
         {% endfor %}
     </ul>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Space. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
+
+

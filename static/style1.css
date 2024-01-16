@@ -1,5 +1,11 @@
 /* style1.css */
 
+/* Reset some default styles */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
 /* Add this rule to style the img element */
 img {
     max-width: 100%;
@@ -8,11 +14,44 @@ img {
     margin: 0 auto; /* To center the image horizontally */
 }
 
-/* Add other styles as needed */
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+}
 
+/* Navbar styles */
+.navbar {
+    background-color: #fff; /* Set your desired background color */
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+/* Navbar toggler icon color */
+.navbar-toggler-icon {
+    background-color: #000; /* Set your desired color */
+}
+
+/* Navbar link styles */
+.navbar-nav .nav-link {
+    color: #000; /* Set your desired color */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Set your desired hover color */
+}
+
+/* Navbar dropdown styles */
+.dropdown-menu {
+    background-color: #fff; /* Set your desired background color */
+    border: 1px solid #ddd; /* Set your desired border color */
+}
+
+/* Background container styles */
 .background-container {
     position: relative;
-    width: 100vw; /* Use 100vw for full width of the viewport */
+    width: 100vw; /* Use 100vw for the full width of the viewport */
     height: 100vh;
     margin-bottom: 100px;
     padding: 20px;
@@ -24,41 +63,56 @@ img {
 
 .background-container h1,
 .background-container h3 {
-    margin-bottom: 30px;
+    margin-bottom: 10px; /* Adjusted margin for h1 and h3 */
 }
 
 .background-container button {
-    margin-top: 10px;
+    margin-top: 20px; /* Adjusted margin for the button */
     display: block;
     margin-bottom: 20px;
 }
 
-.background-container1 {
-    position: relative;
-    height: 100vh;
-    margin-bottom: 100px;
-    padding: 20px;
-    background: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZnJlZSUyMHNwYWNlJTIwaW1hZ2VzfGVufDB8fDB8fHww') no-repeat center/cover;
-}
-
-.background-container2 {
-    position: relative;
-    height: 100vh;
-    margin-bottom: 100px;
-    padding: 20px;
-    background: url('https://images.unsplash.com/photo-1464802686167-b939a6910659?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZyZWUlMjBzcGFjZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D') no-repeat center/cover;
-}
-
+/* Background container specific styles */
+.background-container1,
+.background-container2,
 .background-container3 {
     position: relative;
     height: 100vh;
     margin-bottom: 100px;
     padding: 20px;
+}
+
+.background-container1 {
+    background: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZnJlZSUyMHNwYWNlJTIwaW1hZ2VzfGVufDB8fDB8fHww') no-repeat center/cover;
+}
+
+.background-container2 {
+    background: url('https://images.unsplash.com/photo-1464802686167-b939a6910659?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZyZWUlMjBzcGFjZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D') no-repeat center/cover;
+}
+
+.background-container3 {
     background: url('https://images.unsplash.com/photo-1622784618764-f60d51bd1fc6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGZyZWUlMjBzcGFjZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D') no-repeat center/cover;
 }
 
+/* Footer styles */
 .footer {
     background-color: #f8f9fa; /* Bootstrap light gray background color */
     padding: 20px 0;
     text-align: center;
 }
+
+/* Social icons styles */
+.social-icons {
+    margin-top: 20px; /* Adjust the margin as needed */
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons img {
+    width: 30px; /* Adjust the width of the social media icons as needed */
+    height: 30px; /* Adjust the height of the social media icons as needed */
+    margin: 0 10px; /* Adjust the margin between icons as needed */
+    vertical-align: middle;
+}
+
+/* ... (other styles) */

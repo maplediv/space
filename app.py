@@ -4,6 +4,7 @@ from datetime import date, timedelta
 from config import Config
 #from flask_debugtoolbar import DebugToolbarExtension
 app = Flask(__name__, static_url_path='/static')
+
 #debug_toolbar = DebugToolbarExtension(app)
 # Only enable DebugToolbar in development
 #if app.debug:
@@ -31,14 +32,14 @@ EPIC_API_KEY = Config.EPIC_API_KEY
 # ... (other configurations)
 
 # Route for the homepage (space.html)
-@app.route("/space")
+@app.route("/")
 def space():
     # Add any logic you need for the homepage here
     # For example, you can render a template or return a simple message
     return render_template("space.html")
 
 # Route to display the APOD information
-@app.route("/")
+@app.route("/apod")
 def index():
     # Make API request to NASA APOD
     params = {"api_key": APOD_API_KEY}
@@ -92,10 +93,45 @@ def neo():
     print("Error response:", response.content)
     return render_template("neo.html", neo_info=[])
 
+# SpaceX Telemetry API endpoint
+# ...
 
+# SpaceX Telemetry API endpoint
+SPACEX_API_BASE_URL = "https://api.spacexdata.com/v4/launches/latest"
+
+# SpaceX Telemetry API endpoint
+# Route handling SpaceX Telemetry data
+# SpaceX Telemetry API endpoint
+# Route handling SpaceX Telemetry data
+# Update the SpaceX API endpoint
+SPACEX_API_BASE_URL = "https://api.spacexdata.com/v4/launches"
+
+# ...
+
+# Route handling SpaceX Telemetry data
+@app.route("/spacex")
+def spacex_telemetry():
+    try:
+        # Make API request to SpaceX Telemetry API
+        response = requests.get(SPACEX_API_BASE_URL)
+
+        # Check if the response is successful (status code 200)
+        if response.status_code == 200:
+            spacex_data = response.json()
+            return render_template("spacex.html", spacex_launches=spacex_data)  # Pass spacex_data as spacex_launches
+        else:
+            # Handle the error case for unsuccessful API response
+            return jsonify({"error": "Failed to fetch SpaceX Telemetry data"}), 500
+    except requests.exceptions.RequestException as e:
+        # Handle the error case for any exceptions during the request
+        return jsonify({"error": f"Failed to fetch SpaceX Telemetry data: {e}"}), 500
+# ...
 
 # JWST API endpoint
 JWST_API_BASE_URL = "https://api.jwstapi.com"
+
+# ...
+
 
 # Route to get JWST data
 @app.route("/jwst_data", methods=["GET"])
