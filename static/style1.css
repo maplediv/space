@@ -78,9 +78,79 @@ body {
 .background-container3 {
     position: relative;
     height: 100vh;
-    margin-bottom: 100px;
+    margin-bottom: 75px;
     padding: 20px;
 }
+
+
+.background-container1 h1,
+.background-container2 h1,
+.background-container3 h1,
+.background-container1 h3,
+.background-container2 h3,
+.background-container3 h3,
+.background-container1 button,
+.background-container2 button,
+.background-container3 button {
+    margin-bottom: 10px; /* Adjusted margin for reducing space between elements */
+}
+
+/* style1.css */
+
+/* ... (previous styles) */
+
+/* style1.css */
+
+/* ... (previous styles) */
+
+/* Container styles for API content */
+/* style1.css */
+
+/* ... (previous styles) */
+
+/* Container styles for API content */
+.container-api {
+    padding-left: 0; /* Remove left padding */
+    padding-right: 0; /* Remove right padding */
+    text-align: left;
+}
+
+.container-api img {
+    width: 100%; /* Set the image width to 100% of its container */
+    height: auto;
+    margin-bottom: 10px; /* Adjusted margin for reducing space between elements */
+}
+
+.container-api h1,
+.container-api h3,
+.container-api button {
+    margin-bottom: 50px;
+    margin-top: 50px;  /* Adjusted margin for reducing space between elements */
+}
+
+/* ... (other styles) */
+
+
+/* ... (other styles) */
+
+
+/* ... (other styles) */
+/* style1.css */
+
+/* ... (previous styles) */
+
+/* Background container specific styles */
+.background-container1 .overlay-content,
+.background-container2 .overlay-content,
+.background-container3 .overlay-content {
+    margin-top: 50px; /* Adjusted margin to move the content downward */
+}
+
+/* ... (other styles) */
+
+
+/* ... (other styles) */
+
 
 .background-container1 {
     background: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZnJlZSUyMHNwYWNlJTIwaW1hZ2VzfGVufDB8fDB8fHww') no-repeat center/cover;
