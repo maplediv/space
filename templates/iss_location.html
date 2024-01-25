@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
 </head>
 
-<body>
+<body class="body-background-image">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <!-- Left-aligned image -->
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <img src="{{ url_for('static', filename='rocket_launch.png') }}" alt="Logo" width="30" height="30"
                     class="d-inline-block align-top">
                 SPACE
@@ -40,30 +40,62 @@
                         <a class="nav-link" href="/apod">APOD</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/spacex">SpaceX</a>
+                        <a class="nav-link" href="/iss_location">ISS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/neo">NEO</a>
                     </li>
                 </ul>
-               
+            </div>
+        </div>
     </nav>
+   
+    <!-- ISS Location Section -->
+    <div class="container mt-4">
+        <h1>ISS Location</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th>Location</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ latitude }}</td>
+                    <td>{{ longitude }}</td>
+                    <td id="location"></td>
+                    <td>{{ timestamp }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-    <!-- Your HTML structure -->
 
-    <h1>SpaceX Launches</h1>
-    <ul>
-        {% for launch in spacex_launches %}
-            <li>
-                <p>Name: {{ launch['name'] }}</p>
-                <p>Date (UTC): {{ launch['date_utc'] }}</p>
-            </li>
-        {% endfor %}
-    </ul>
+<div class="container mt-4">
+    <h2></h2>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/P9C25Un7xaM?si=KzNOBFU7Hb2sPV-k"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+</div>
+
 
     <footer class="footer">
         <div class="container">
             <p>&copy; 2023 Space. All rights reserved.</p>
+            <p>Share this page!</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank" title="Share on Facebook"><img
+                        src="{{ url_for('static', filename='facebook.png') }}" alt="Facebook"></a>
+                <a href="https://www.instagram.com/" target="_blank" title="Share on Instagram"><img
+                        src="{{ url_for('static', filename='instagram.png') }}" alt="Instagram"></a>
+                <!-- Add more social media icons as needed -->
+            </div>
         </div>
     </footer>
 
@@ -77,9 +109,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+        <script src="{{ url_for('static', filename='app.js') }}"></script>
 
 </body>
 
 </html>
-
-

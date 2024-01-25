@@ -40,61 +40,68 @@
                         <a class="nav-link" href="/apod">APOD</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/spacex">SpaceX</a>
+                        <a class="nav-link" href="/iss_location">ISS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/neo">NEO</a>
                     </li>
                 </ul>
-
-                <!-- Dropdown for small screens -->
-               
+            </div>
+        </div>
     </nav>
+
     <!-- Your HTML structure -->
 
-    <div class="container-fluid background-container background-container1">
-        <div class="overlay-content">
+   <!-- Your HTML structure -->
+
+<div class="container-fluid background-container background-container1">
+    <div class="overlay-content">
+        <div class="text-center">
             <h1>Astronomy Picture of the Day</h1>
             <h3>See Nasa's amazing photos of space!</h3>
-            <button class="btn btn-primary" onclick="window.location.href='/apod'">View Photo</button>
-
+            <button class="btn btn-primary custom-button" onclick="window.location.href='/apod'">View Photo</button>
         </div>
     </div>
+</div>
 
-    <div class="container-fluid background-container background-container2">
-        <div class="overlay-content">
-            <h1>SpaceX Launches</h1>
-            <h3>View past and upcoming SpaceX launches  </h3>
-            <button class="btn btn-primary" onclick="window.location.href='/spacex'">See Launches</button>
+<div class="container-fluid background-container background-container2">
+    <div class="overlay-content">
+        <div class="text-center">
+            <h1>International Space Station
+            </h1>
+            <h3>See the view from the ISS and it's <br> current location in real time  </h3>
+            <button class="btn btn-primary custom-button" onclick="window.location.href='/iss_location'">Find the ISS</button>
         </div>
     </div>
+</div>
 
-    <div class="container-fluid background-container background-container3">
-        <div class="overlay-content">
+<div class="container-fluid background-container background-container3">
+    <div class="overlay-content">
+        <div class="text-center">
             <h1>Near Earth Objects</h1>
-            <h3>Explore Nasa's log of Near Earth Objects</h3>
-            <button class="btn btn-primary" onclick="window.location.href='/neo'">View NEO</button>
+            <h3>Explore Nasa's log of Near Earth Objects<br> while listening to the sound of the Milky Way galaxy</h3>
+            <button class="btn btn-primary custom-button" onclick="window.location.href='/neo'">View NEO</button>
         </div>
     </div>
+</div>
 
-    
     <footer class="footer">
         <div class="container">
             <p>&copy; 2023 Space. All rights reserved.</p>
             <p>Share this page!</p>
             <div class="social-icons">
-                <a href="https://www.facebook.com/" target="_blank" title="Share on Facebook"><img src="{{ url_for('static', filename='facebook.png') }}" alt="Facebook"></a>
-                <a href="https://www.instagram.com/" target="_blank" title="Share on Instagram"><img src="{{ url_for('static', filename='instagram.png') }}" alt="Instagram"></a>
+                <a href="https://www.facebook.com/" target="_blank" title="Share on Facebook"><img
+                        src="{{ url_for('static', filename='facebook.png') }}" alt="Facebook"></a>
+                <a href="https://www.instagram.com/" target="_blank" title="Share on Instagram"><img
+                        src="{{ url_for('static', filename='instagram.png') }}" alt="Instagram"></a>
                 <!-- Add more social media icons as needed -->
             </div>
-           
         </div>
     </footer>
-    
 
     <!-- Scripts -->
- 
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"

@@ -38,6 +38,30 @@ def space():
     # For example, you can render a template or return a simple message
     return render_template("space.html")
 
+@app.route('/iss_location')
+def iss_location():
+    # API endpoint for ISS Location Now
+    api_url = 'http://api.open-notify.org/iss-now.json'
+
+    # Make a request to the API
+    response = requests.get(api_url)
+
+    # Check if the request was successful (status code 200)
+    if response.status_code == 200:
+        # Parse the JSON response
+        iss_data = response.json()
+
+        # Extract relevant information from the response
+        latitude = iss_data['iss_position']['latitude']
+        longitude = iss_data['iss_position']['longitude']
+        timestamp = iss_data['timestamp']
+
+        # Render the SpaceX template with the ISS location information
+        return render_template('iss_location.html', latitude=latitude, longitude=longitude, timestamp=timestamp)
+    else:
+        # If the request was not successful, return an error message
+        return f"Error: Unable to fetch ISS location. Status code: {response.status_code}"
+
 # Route to display the APOD information
 @app.route("/apod")
 def index():
