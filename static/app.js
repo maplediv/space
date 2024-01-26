@@ -26,4 +26,14 @@
     $(document).ready(function () {
         displayLocation();
     });
+
+// Add a script to toggle the button text
+        document.getElementById('readMoreButton').addEventListener('click', function () {
+            var buttonText = this.innerHTML.trim();
+            if (buttonText === 'Read More') {
+                this.innerHTML = 'Read Less';
+            } else {
+                this.innerHTML = 'Read More';
+            }
+        });
 </script>

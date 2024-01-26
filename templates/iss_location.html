@@ -19,7 +19,7 @@
         <div class="container-fluid">
             <!-- Left-aligned image -->
             <a class="navbar-brand" href="/">
-                <img src="{{ url_for('static', filename='rocket_launch.png') }}" alt="Logo" width="30" height="30"
+                <img src="{{ url_for('static', filename='rocket_launch.svg') }}" alt="Logo" width="30" height="30"
                     class="d-inline-block align-top">
                 SPACE
             </a>
@@ -52,14 +52,14 @@
    
     <!-- ISS Location Section -->
     <div class="container mt-4">
-        <h1>ISS Location</h1>
+        <h1>International Space Station Location</h1>
         <table class="table">
             <thead>
                 <tr>
                     <th>Latitude</th>
                     <th>Longitude</th>
                     <th>Location</th>
-                    <th>Timestamp</th>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -67,7 +67,7 @@
                     <td>{{ latitude }}</td>
                     <td>{{ longitude }}</td>
                     <td id="location"></td>
-                    <td>{{ timestamp }}</td>
+                   
                 </tr>
             </tbody>
         </table>
