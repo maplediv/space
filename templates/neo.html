@@ -1,5 +1,3 @@
-<!-- neo.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,20 +14,15 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <!-- Left-aligned image -->
             <a class="navbar-brand" href="/">
                 <img src="{{ url_for('static', filename='rocket_launch.svg') }}" alt="Logo" width="30" height="30"
                     class="d-inline-block align-top">
                 SPACE
             </a>
-
-            <!-- Navbar toggler for small screens -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <!-- Navbar items (right-aligned) -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -48,63 +41,65 @@
             </div>
         </div>
     </nav>
-   <!-- ... (navbar and other content) -->
 
-   
+    
+    <div id="galacticCenterContainer">
+        <div class="container" id="galacticCenterContent">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Galactic Center Sonification</h2>
+                    <p class="responsive-text">
+                        Explore the center of our very own Milky Way galaxy! The translation begins on the left side of
+                        the
+                        image and moves to the right, with the sounds representing the position and brightness of the
+                        sources. The light of objects located towards the top of the image is heard as higher pitches
+                        while
+                        the intensity of the light controls the volume. Stars and compact sources are converted to
+                        individual
+                        notes while extended clouds of gas and dust produce an evolving drone. The crescendo happens when
+                        we
+                        reach the bright region to the lower right of the image. This is where the 4-million-solar-mass
+                        supermassive black hole at the center of the Galaxy, known as Sagittarius A*, resides, and where
+                        the
+                        clouds of gas and dust are the brightest.
+                    </p>
 
-    <!-- Left-aligned audio control with padding -->
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Galactic Center Sonification</h2>
-                <p class="responsive-text">
-                    Explore the center of our very own Milky Way galaxy! The translation begins on the left side of the
-                    image and moves to the right, with the sounds representing the position and brightness of the
-                    sources. The light of objects located towards the top of the image is heard as higher pitches while
-                    the intensity of the light controls the volume. Stars and compact sources are converted to individual
-                    notes while extended clouds of gas and dust produce an evolving drone. The crescendo happens when we
-                    reach the bright region to the lower right of the image. This is where the 4-million-solar-mass
-                    supermassive black hole at the center of the Galaxy, known as Sagittarius A*, resides, and where the
-                    clouds of gas and dust are the brightest.
-                </p>
+                    <button class="btn btn-primary custom-button" type="button" data-toggle="collapse"
+                        data-target="#readMoreText" aria-expanded="false" aria-controls="readMoreText">
+                        Read More
+                    </button>
 
-                <button class="btn btn-primary custom-button" type="button" data-toggle="collapse"
-                    data-target="#readMoreText" aria-expanded="false" aria-controls="readMoreText">
-                    Read More
-                </button>
-
-                <div class="collapse" id="readMoreText">
-                    The dataset covering this expanse spans approximately 400 light years. Each of the telescopes—NASA's
-                    Chandra X-ray Observatory, Hubble Space Telescope, and Spitzer Space Telescope—contributes with its
-                    unique instrument, collectively forming a harmonious ensemble that produces extraordinary cosmic
-                    melodies. Each image reveals different phenomena happening in this region about 26,000 light years
-                    from Earth. The Hubble image outlines energetic regions where stars are being born, while Spitzer's
-                    infrared data show glowing clouds of dust containing complex structures. X-rays from Chandra reveal
-                    gas heated to millions of degrees from stellar explosions and outflows from Sagittarius A*.
+                    <div class="collapse" id="readMoreText">
+                        The dataset covering this expanse spans approximately 400 light years. Each of the
+                        telescopes—NASA's
+                        Chandra X-ray Observatory, Hubble Space Telescope, and Spitzer Space Telescope—contributes
+                        with its
+                        unique instrument, collectively forming a harmonious ensemble that produces extraordinary
+                        cosmic
+                        melodies. Each image reveals different phenomena happening in this region about 26,000 light
+                        years
+                        from Earth. The Hubble image outlines energetic regions where stars are being born, while
+                        Spitzer's
+                        infrared data show glowing clouds of dust containing complex structures. X-rays from Chandra
+                        reveal
+                        gas heated to millions of degrees from stellar explosions and outflows from Sagittarius A*.
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-md-6">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe width="560" height="315"
-                        src="https://www.youtube.com/embed/9YIERCD5PYY?si=mrs5Sh-owt5W_5-k"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
+                <div class="col-md-6">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/9YIERCD5PYY?si=mrs5Sh-owt5W_5-k"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    
-
-    <div class="table-responsive">
-        <!-- ... (table content) -->
-    </div>
-</div>
-<!-- ... (footer and script tags) -->
-
-    <div class="container mt-4">
+    <div class="container mt-4" id="neoSection">
         <h2>Near Earth Objects</h2>
         <div class="table-responsive">
             <table class="table table-bordered container" id="neoTable">
@@ -131,8 +126,10 @@
             <p>&copy; 2023 Space. All rights reserved.</p>
             <p>Share this page!</p>
             <div class="social-icons">
-                <a href="https://www.facebook.com/" target="_blank" title="Share on Facebook"><img src="{{ url_for('static', filename='facebook.png') }}" alt="Facebook"></a>
-                <a href="https://www.instagram.com/" target="_blank" title="Share on Instagram"><img src="{{ url_for('static', filename='instagram.png') }}" alt="Instagram"></a>
+                <a href="https://www.facebook.com/" target="_blank" title="Share on Facebook"><img
+                        src="{{ url_for('static', filename='facebook.png') }}" alt="Facebook"></a>
+                <a href="https://www.instagram.com/" target="_blank" title="Share on Instagram"><img
+                        src="{{ url_for('static', filename='instagram.png') }}" alt="Instagram"></a>
                 <!-- Add more social media icons as needed -->
             </div>
         </div>
@@ -147,7 +144,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-        <script src="{{ url_for('static', filename='app.js') }}"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 
 </html>

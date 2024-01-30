@@ -58,7 +58,7 @@
                 <tr>
                     <th>Latitude</th>
                     <th>Longitude</th>
-                    <th>Location</th>
+                   
                     
                 </tr>
             </thead>
@@ -66,23 +66,46 @@
                 <tr>
                     <td>{{ latitude }}</td>
                     <td>{{ longitude }}</td>
-                    <td id="location"></td>
+                    
                    
                 </tr>
             </tbody>
         </table>
     </div>
+    <div id="galacticCenterContainer">
+        <div class="container" id="galacticCenterContent">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>The ISS</h2>
+                    <p class="responsive-text">
+                        The International Space Station (ISS) stands as a remarkable testament to international collaboration in space exploration. Orbiting Earth at an average altitude of approximately 420 kilometers (261 miles), the ISS serves as a microgravity laboratory where astronauts and cosmonauts from various countries conduct scientific research and experiments that benefit humanity. Launched in 1998, the ISS represents a joint effort involving space agencies such as NASA (United States), Roscosmos (Russia), ESA (European Space Agency), JAXA (Japan Aerospace Exploration Agency), and CSA (Canadian Space Agency). 
+                    </p>
 
+                    <button class="btn btn-primary custom-button" type="button" data-toggle="collapse"
+                        data-target="#readMoreText" aria-expanded="false" aria-controls="readMoreText">
+                        Read More
+                    </button>
 
-<div class="container mt-4">
-    <h2></h2>
-    <div class="embed-responsive embed-responsive-16by9">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/P9C25Un7xaM?si=KzNOBFU7Hb2sPV-k"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
+                    <div class="collapse" id="readMoreText">
+                        Its modular design comprises interconnected modules and components contributed by each participating nation. This orbiting outpost serves as a platform for advancements in various fields, including astronomy, biology, physics, and materials science, fostering a deeper understanding of the effects of long-duration spaceflight on the human body and providing valuable insights for future interplanetary exploration. The ISS also serves as a testament to the peaceful collaboration of nations in the pursuit of scientific knowledge beyond our planet.
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/P9C25Un7xaM?si=KzNOBFU7Hb2sPV-k"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+
+
+
 
 
     <footer class="footer">

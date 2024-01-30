@@ -1,39 +1,24 @@
-<script>
-    function displayLocation() {
-        var latitude = parseFloat("{{ latitude }}");
-        var longitude = parseFloat("{{ longitude }}");
 
-        console.log("Latitude:", latitude);
-        console.log("Longitude:", longitude);
 
-        var geocodingApiUrl = `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`;
-
-        $.ajax({
-            url: geocodingApiUrl,
-            method: "GET",
-            success: function (data) {
-                console.log("Geocoding API response:", data);
-                var location = data.display_name;
-                $("#location").text(location);
-            },
-            error: function (error) {
-                console.error("Geocoding API error:", error);
-                $("#location").text("Location not available");
-            }
-        });
-    }
-
-    $(document).ready(function () {
-        displayLocation();
+    // Toggle button text and collapse manually
+    $('#readMoreButton').on('click', function () {
+        var buttonText = $(this).text().trim();
+        if (buttonText === 'Read More') {
+            $('#readMoreText').collapse('show');
+            $(this).text('Read Less');
+        } else {
+            $('#readMoreText').collapse('hide');
+            $(this).text('Read More');
+        }
     });
 
-// Add a script to toggle the button text
-        document.getElementById('readMoreButton').addEventListener('click', function () {
-            var buttonText = this.innerHTML.trim();
-            if (buttonText === 'Read More') {
-                this.innerHTML = 'Read Less';
-            } else {
-                this.innerHTML = 'Read More';
-            }
-        });
-</script>
+    // Handle the collapse events to update button text
+    $('#readMoreText').on('show.bs.collapse', function () {
+        $('#readMoreButton').text('Read Less');
+    });
+
+    $('#readMoreText').on('hide.bs.collapse', function () {
+        $('#readMoreButton').text('Read More');
+    });
+
+   

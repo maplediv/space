@@ -2,31 +2,26 @@
 h1, h2, h3, p, ul {
     margin-top: 20px;
     margin-bottom: 20px;
-    padding-left:  0px;
+    padding-left: 0;
 }
 
 body {
-    margin-top: 0px;
-    margin-bottom: 20px;
-    padding:  0px;
+    margin: 0;
+    padding: 0;
 }
 
-/* Add this rule for the top padding of videos */
 /* Add this rule for the top padding of videos */
 .embed-responsive iframe {
     padding-top: 20px;
 }
 
-
 /* Add this rule for the container-api class */
 .container-api {
-    padding: 0px;
+    padding: 0;
 }
 
 /* Add this rule for the h1 and p elements inside container-api */
-.container-api h1{
-    padding-left: 10px;
-}
+.container-api h1,
 .container-api p {
     padding-left: 10px;
 }
@@ -40,22 +35,23 @@ body {
 /* Add this rule for the responsive paragraph of text */
 .responsive-text {
     font-size: 16px; /* Adjust font size as needed */
-    line-height: 1.5; 
+    line-height: 1.5;
 }
 
 .audio-container {
     text-align: left;
     padding: 10px;
 }
+
 .overlay-content {
     text-align: left;
 }
 
-.overlay-content h1
-{
+.overlay-content h1 {
     margin-bottom: 10px;
     margin-top: 100px;
 }
+
 .overlay-content h3 {
     margin-bottom: 10px;
     margin-top: 25px;
@@ -80,6 +76,7 @@ body {
 
 /* Navbar styles */
 .navbar {
+    padding: 20px 20px; 
     background-color: #fff; /* Set your desired background color */
 }
 
@@ -87,10 +84,14 @@ body {
     margin-right: 10px;
 }
 
-
 /* Navbar link styles */
+.navbar-nav {
+    margin: 0; /* Remove margin from navbar items */
+}
+
 .navbar-nav .nav-link {
     color: #000; /* Set your desired color */
+    margin: 0; /* Remove margin from navbar links */
 }
 
 .navbar-nav .nav-link:hover {
@@ -115,12 +116,15 @@ body {
 .background-container {
     position: relative;
     width: 100vw; /* Use 100vw for the full width of the viewport */
-    height: 100vh;
-    margin-bottom: 0px;
+    min-height: 100vh; /* Set the minimum height to cover the entire viewport */
+    margin-bottom: 0;
     padding: 20px;
     color: #fff;
     background-position: center;
     background-size: cover; /* Ensure the background image scales responsively */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the content vertically */
 }
 
 .background-container h1,
@@ -146,6 +150,8 @@ body {
     background-color: #f8f9fa; /* Bootstrap light gray background color */
     padding: 20px 0;
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 0; /* Ensure no margin at the bottom of the footer */
 }
 
 /* Social icons styles */
@@ -163,29 +169,60 @@ body {
 }
 
 /* Define a new class for the background image */
-.body-background-image {
-    background-image: url('');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
 
 .background-container1 {
-    background-image: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZnJlZSUyMHNwYWNlJTIwaW1hZ2VzfGVufDB8fDB8fHww');
+    background-image: url('img1.jpg');
 }
 
 .background-container2 {
-    background-image: url('https://images.unsplash.com/photo-1464802686167-b939a6910659?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZyZWUlMjBzcGFjZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D');
+    background-image: url('img4.jpg');
 }
 
 .background-container3 {
-    background-image: url('https://images.unsplash.com/photo-1622784618764-f60d51bd1fc6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGZy');
+    background-image: url('img7.jpg');
 }
+
 /* Add this rule to your CSS sheet */
 .custom-button {
     background-color: #002C5B;
     border: 1px solid #002C5B;
-    color: #fff; 
-    
+    color: #fff;
+}
+
+/* Your existing CSS rules */
+
+/* Add this rule to style the read more/less button */
+.custom-button {
+    background-color: #002C5B;
+    border: 1px solid #002C5B;
+    color: #fff;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to indicate interactivity */
+    transition: background-color 0.3s, color 0.3s; /* Add smooth transition effect */
+}
+
+/* Style the button on hover */
+.custom-button:hover {
+    background-color: #001A35; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+/* Style the collapsed state of the content */
+#readMoreText {
+    display: none; /* Hide the content by default */
+}
+
+
+/* /* Add this rule to style the Galactic Center Sonification section container */
+#galacticCenterContainer {
+    background-color: #2D2F31; /* Set black background color */
+    color: #fff; /* Set white text color */
+    margin-bottom: 0; /* Remove margin bottom for the section container */
+    padding: 40px 0; /* Add padding to the top and bottom of the section container */
+}
+
+#galacticCenterContent {
+    padding: 40px; /* Add padding to the content inside the section container */
 }
 

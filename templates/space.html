@@ -9,81 +9,72 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
         crossorigin="anonymous">
-
     <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
 </head>
 
 <body>
-
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <!-- Left-aligned image -->
-                <a class="navbar-brand" href="#">
-                    <img src="{{ url_for('static', filename='rocket_launch.svg') }}" alt="Logo" width="30" height="30"
-                        class="d-inline-block align-top">
-                    SPACE
-                </a>
-
-                <!-- Navbar toggler for small screens -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Navbar items (right-aligned) -->
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/apod">APOD</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/iss_location">ISS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/neo">NEO</a>
-                        </li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{{ url_for('static', filename='rocket_launch.svg') }}" alt="Logo" width="30" height="30"
+                    class="d-inline-block align-top">
+                SPACE
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto"> <!-- Added ml-auto here -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/apod">APOD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/iss_location">ISS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/neo">NEO</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+            
+        </div>
+    </nav>
 
-    <!-- Your HTML structure -->
-
-   <!-- Your HTML structure -->
-
-<div class="container-fluid background-container background-container1">
-    <div class="overlay-content">
-        <div class="text-center">
-            <h1>Astronomy Picture of the Day</h1>
-            <h3>See Nasa's amazing photos of space!</h3>
-            <button class="btn btn-primary custom-button" onclick="window.location.href='/apod'">View Photo</button>
+    <div class="container-fluid background-container background-container1">
+        <div class="overlay-content">
+            <div class="text-center">
+                <h1>Astronomy Picture of the Day</h1>
+                <h3>See NASA's amazing photos of space!</h3>
+                <button class="btn btn-primary custom-button" onclick="window.location.href='/apod'">View Photo</button>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="container-fluid background-container background-container2">
-    <div class="overlay-content">
-        <div class="text-center">
-            <h1>International Space Station
-            </h1>
-            <h3>See the view from the ISS and it's <br> current location in real time  </h3>
-            <button class="btn btn-primary custom-button" onclick="window.location.href='/iss_location'">Find the ISS</button>
+    <div class="container-fluid background-container background-container2">
+        <div class="overlay-content">
+            <div class="text-center">
+                <h1>International Space Station</h1>
+                <h3>See the view from the ISS and it's <br> current location in real time</h3>
+                <button class="btn btn-primary custom-button"
+                    onclick="window.location.href='/iss_location'">Find the ISS</button>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="container-fluid background-container background-container3">
-    <div class="overlay-content">
-        <div class="text-center">
-            <h1>Near Earth Objects</h1>
-            <h3>Explore Nasa's log of Near Earth Objects<br> while listening to the sound of the Milky Way galaxy</h3>
-            <button class="btn btn-primary custom-button" onclick="window.location.href='/neo'">View NEO</button>
+    <div class="container-fluid background-container background-container3">
+        <div class="overlay-content">
+            <div class="text-center">
+                <h1>Near Earth Objects</h1>
+                <h3>Explore NASA's log of Near Earth Objects<br> while listening to the sound of the Milky Way
+                    galaxy</h3>
+                <button class="btn btn-primary custom-button" onclick="window.location.href='/neo'">View NEO</button>
+            </div>
         </div>
     </div>
-</div>
 
     <footer class="footer">
         <div class="container">
@@ -100,7 +91,6 @@
     </footer>
 
     <!-- Scripts -->
-
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
@@ -110,7 +100,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-
 </body>
 
 </html>
