@@ -13,18 +13,11 @@ body {
 /* Add this rule for the top padding of videos */
 .embed-responsive iframe {
     padding-top: 20px;
+    margin-left: 50px; 
 }
 
 /* Add this rule for the container-api class */
-.container-api {
-    padding: 0;
-}
 
-/* Add this rule for the h1 and p elements inside container-api */
-.container-api h1,
-.container-api p {
-    padding-left: 10px;
-}
 
 /* Add this rule for the text container */
 .text-container {
@@ -133,17 +126,60 @@ body {
     margin-bottom: 10px;
 }
 
-/* Container styles for API content */
+/* Add this rule to style the container-api class */
+/* Add this rule to style the container-api class */
 .container-api {
-    padding-left: 0; /* Remove left padding */
-    padding-right: 0; /* Remove right padding */
+    padding: 0;
+    display: flex;
+    align-items: flex-start; /* Align items to the start (top) */
 }
 
-.container-api img {
-    max-width: 100%; /* Set the image width to 100% of its container */
-    height: auto;
-    margin-bottom: 10px; /* Adjusted margin for reducing space between elements */
+/* Add this rule to style the img element */
+
+
+/* Add this rule to style the content wrapper */
+.content {
+    text-align: left; /* Align text to the left */
+    align-self: flex-start; /* Align the content to the start (top) */
 }
+
+
+/* Add this rule to style the img element */
+.container-api img {
+    max-width: 100%; /* Set the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; 
+    margin-left: 20px; 
+    margin-right: 50px; /* Add space between the image and text */
+}
+
+/* Add this rule to style the content wrapper */
+
+
+/* Add this rule to style the paragraph text */
+
+
+/* Add this rule to style the image */
+.container-api img {
+    margin-right: 20px; /* Add space between the image and text */
+}
+
+/* Add this rule for the h1 and p elements inside container-api */
+.container-api h1 {
+    margin-top: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 0px;
+}
+.container-api p {
+    padding-left: 50px;
+    padding-right: 50px;
+    
+
+}/* Add this rule for the container-api class */
+/* Add this rule for the container-api class */
+
+
 
 /* Footer styles */
 .footer {
@@ -213,8 +249,7 @@ body {
     display: none; /* Hide the content by default */
 }
 
-
-/* /* Add this rule to style the Galactic Center Sonification section container */
+/* Add this rule to style the Galactic Center Sonification section container */
 #galacticCenterContainer {
     background-color: #2D2F31; /* Set black background color */
     color: #fff; /* Set white text color */
@@ -225,4 +260,3 @@ body {
 #galacticCenterContent {
     padding: 40px; /* Add padding to the content inside the section container */
 }
-
