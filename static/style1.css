@@ -10,16 +10,25 @@ body {
     padding: 0;
 }
 
+/* Define a custom header class */
+.custom-header {
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 20px; /* Add bottom margin to align with paragraph */
+}
+
+
 /* Add this rule for the top padding of videos */
 .embed-responsive iframe {
     padding-top: 20px;
     margin-left: 50px; 
 }
 
-/* Add this rule for the container-api class */
+@media screen and (max-width: 769px) {
+    .embed-responsive iframe {
+        margin-left: 0; /* Remove the left margin */
+    }
+}
 
-
-/* Add this rule for the text container */
 .text-container {
     text-align: left;
     margin-bottom: 20px; /* Adjust margin as needed */
@@ -126,62 +135,40 @@ body {
     margin-bottom: 10px;
 }
 
-/* Add this rule to style the container-api class */
-/* Add this rule to style the container-api class */
-.container-api {
-    padding: 0;
-    display: flex;
-    align-items: flex-start; /* Align items to the start (top) */
+
+.container-api img {
+    max-width: 100%; /* Set the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px;
+    margin-left: auto; /* Center the image horizontally */
+    margin-right: auto; /* Center the image horizontally */
 }
 
-/* Add this rule to style the img element */
+
+.container-api {
+    padding: 0 20px; /* Add horizontal padding to the container */
+    max-width: 100%; /* Ensure the container does not exceed the screen width */
+    margin: 0 auto; /* Center the container horizontally */
+}
 
 
-/* Add this rule to style the content wrapper */
 .content {
     text-align: left; /* Align text to the left */
     align-self: flex-start; /* Align the content to the start (top) */
 }
 
 
-/* Add this rule to style the img element */
-.container-api img {
-    max-width: 100%; /* Set the maximum width of the image */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 20px; 
-    margin-left: 20px; 
-    margin-right: 50px; /* Add space between the image and text */
-}
-
-/* Add this rule to style the content wrapper */
-
-
-/* Add this rule to style the paragraph text */
-
-
-/* Add this rule to style the image */
-.container-api img {
-    margin-right: 20px; /* Add space between the image and text */
-}
-
-/* Add this rule for the h1 and p elements inside container-api */
 .container-api h1 {
     margin-top: 0;
-    padding-left: 50px;
+    padding-left: 20px;
     padding-right: 50px;
     padding-top: 0px;
 }
 .container-api p {
-    padding-left: 50px;
+    padding-left: 20px;
     padding-right: 50px;
-    
-
 }/* Add this rule for the container-api class */
-/* Add this rule for the container-api class */
 
-
-
-/* Footer styles */
 .footer {
     background-color: #f8f9fa; /* Bootstrap light gray background color */
     padding: 20px 0;
@@ -225,9 +212,7 @@ body {
     color: #fff;
 }
 
-/* Your existing CSS rules */
 
-/* Add this rule to style the read more/less button */
 .custom-button {
     background-color: #002C5B;
     border: 1px solid #002C5B;
