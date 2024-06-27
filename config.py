@@ -1,11 +1,11 @@
 class Config:
     APOD_API_KEY = "HX0IGnZXQcGmjF8D0PkgOfk0aduJ3qBq6m27286b"
-    
+    APOD_API_BASE_URL = "https://api.nasa.gov/planetary/apod"
     NEO_API_KEY = "QcTRnH6ssd7CUM4rGn4GSgMeq5fQiBzEO8EaQKOm"
     NEO_API_START_DATE = "20230101"
     NEO_API_END_DATE = "20240105"
     NEO_API_ENDPOINT = f"https://api.nasa.gov/neo/rest/v1/feed?start_date={NEO_API_START_DATE}&end_date={NEO_API_END_DATE}&api_key={NEO_API_KEY}"
-    
+    NEO_API_BASE_URL = "https://api.nasa.gov/neo/rest/v1"
     import os
 
 
