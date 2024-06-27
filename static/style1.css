@@ -1,10 +1,14 @@
 /* Reset some default styles */
-h1, h2, h3, p, ul {
+/* h1, h2, h3, p, ul {
     margin-top: 20px;
     margin-bottom: 20px;
     padding-left: 0;
+} */
+.responsive-text {
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 1.5;
+    padding: 0px !important;
 }
-
 body {
     margin: 0;
     padding: 0;
@@ -16,13 +20,59 @@ body {
     margin-bottom: 20px; /* Add bottom margin to align with paragraph */
 }
 
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
 
 /* Add this rule for the top padding of videos */
 .embed-responsive iframe {
-    padding-top: 20px;
+    padding-top: 0px;
     margin-left: 50px; 
 }
 
+@media (max-width: 393px) {
+    .responsive-text {
+        font-size: 16px; /* Adjust font size as needed */
+        line-height: 1.5;
+        padding: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    h1 {
+        font-size: 32px !important;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+    
+      h2 {
+        font-size: 28px !important;
+      }
+      .btn {
+        margin-bottom: 40px !important;
+        margin-top: 40px !important; 
+        padding: 15px;
+        margin-right: 0px !important;
+    }
+    
+    .btn-primary{
+        color: #ffffff !important;
+        background-color: #000000;
+        border: #000000;
+    }
+    
+    .embed-responsive{
+    margin-bottom: 40px;
+    margin-top: 40px;
+    }
+    .full-width-mobile {
+    width: 100%;
+    margin-bottom: 0px; /* Add margin if you need spacing between buttons */
+  }
+    }
 @media screen and (max-width: 769px) {
     .embed-responsive iframe {
         margin-left: 0; /* Remove the left margin */
@@ -35,10 +85,7 @@ body {
 }
 
 /* Add this rule for the responsive paragraph of text */
-.responsive-text {
-    font-size: 16px; /* Adjust font size as needed */
-    line-height: 1.5;
-}
+
 
 .audio-container {
     text-align: left;
@@ -49,7 +96,7 @@ body {
     text-align: left;
 }
 
-.overlay-content h1 {
+/* .overlay-content h1 {
     margin-bottom: 10px;
     margin-top: 100px;
 }
@@ -57,10 +104,10 @@ body {
 .overlay-content h3 {
     margin-bottom: 10px;
     margin-top: 25px;
-}
+} */
 
-.overlay-content button {
-    margin-top: 25px; /* Adjust margin as needed */
+/* /* .overlay-content button {
+    margin-top: 25px; 
 }
 
 /* Add this rule to style the img element */
@@ -129,11 +176,11 @@ body {
     align-items: center; /* Center the content vertically */
 }
 
-.background-container h1,
+/* .background-container h1,
 .background-container h3,
 .background-container p {
     margin-bottom: 10px;
-}
+} */
 
 
 .container-api img {
@@ -239,9 +286,11 @@ body {
     background-color: #2D2F31; /* Set black background color */
     color: #fff; /* Set white text color */
     margin-bottom: 0; /* Remove margin bottom for the section container */
-    padding: 40px 0; /* Add padding to the top and bottom of the section container */
+    padding-right: 0px; 
+    padding-left: 0px;
 }
 
 #galacticCenterContent {
-    padding: 40px; /* Add padding to the content inside the section container */
+    padding-left: 40px;
+    padding-right: 40px;
 }
