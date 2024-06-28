@@ -35,7 +35,15 @@ body {
     margin-left: 50px; 
 }
 
+
 @media (max-width: 393px) {
+    .apod{
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+    .bgrnd{
+        color: #ffffff
+    }
     .responsive-text {
         font-size: 16px; /* Adjust font size as needed */
         line-height: 1.5;
