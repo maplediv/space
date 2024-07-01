@@ -77,34 +77,39 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="container mt-4" id="neoSection">
-        <h1>Near Earth Objects</h1>
-        <div class="table-responsive">
-            <table class="table table-bordered container" id="neoTable">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Approach Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for neo_info in neo_info %}
-                    <tr>
-                        <td>{{ neo_info.name }}</td>
-                        <td>{{ neo_info.approach_date }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+        <div id="galacticCenterContainer">
+            <div class="container" id="galacticCenterContent">
+                <div class="row">
+                    <div class="col-md-6">
+            <h1>Near Earth Objects</h1>
+            <div class="table-responsive">
+                <table class="table table-bordered container neo-table" id="neoTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Approach</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for neo_info in neo_info %}
+                        <tr>
+                            <td>{{ neo_info.name }}</td>
+                            <td>{{ neo_info.approach_date }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
+</div>
+</div>
+
+   
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Space. All rights reserved.</p>
-            <p>Share this page!</p>
+            <p class="pfoot">&copy; 2024 Space. All rights reserved.</p>
             <div class="social-icons">
                 <a href="https://www.facebook.com/" target="_blank" title="Share on Facebook"><img
                         src="{{ url_for('static', filename='facebook.png') }}" alt="Facebook"></a>
