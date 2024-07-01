@@ -37,6 +37,9 @@ body {
 
 
 @media (max-width: 393px) {
+    .table{
+        margin-bottom: 0px;
+    }
 .pfoot{
     color:#000000
 }
@@ -85,8 +88,8 @@ body {
     }
     
     .embed-responsive{
-    margin-bottom: 20px;
-    margin-top: 40px;
+    margin-bottom: 0px;
+    margin-top: 20px;
     }
     .full-width-mobile {
     width: 100%;
@@ -260,12 +263,23 @@ body {
 
 /* Define a new class for the background image */
 
+container-fluid{
+    height: 50vh;
+}
+
 .background-container1 {
     background-image: url('img1.jpg');
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; 
+ 
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .background-container2 {
     background-image: url('img4.jpg');
+
 }
 
 .background-container3 {
