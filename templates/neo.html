@@ -46,7 +46,33 @@
         <div class="container" id="galacticCenterContent">
             <div class="row">
                 <div class="col-md-6">
-                    <h1>Galactic Center Sonification</h1>
+                    <h1>Near Earth Objects</h1>
+                    <div class="table-responsive">
+                        <table class="table table-bordered container neo-table" id="neoTable">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Approach</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for neo_info in neo_info %}
+                                <tr>
+                                    <td>{{ neo_info.name }}</td>
+                                    <td>{{ neo_info.approach_date }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="galacticCenterContainer">
+            <div class="container" id="galacticCenterContent">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1>Galactic Center Sonification</h1>
                     <p class="responsive-text">
                         Explore the center of our very own Milky Way galaxy! The translation begins on the left side of
                         the
@@ -62,44 +88,15 @@
                         the
                         clouds of gas and dust are the brightest.
                     </p>
-
-                   
-                </div>
-
-                <div class="col-md-6">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/9YIERCD5PYY?si=mrs5Sh-owt5W_5-k"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="galacticCenterContainer">
-            <div class="container" id="galacticCenterContent">
-                <div class="row">
-                    <div class="col-md-6">
-            <h1>Near Earth Objects</h1>
-            <div class="table-responsive">
-                <table class="table table-bordered container neo-table" id="neoTable">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Approach</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for neo_info in neo_info %}
-                        <tr>
-                            <td>{{ neo_info.name }}</td>
-                            <td>{{ neo_info.approach_date }}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
+                    
+                        <div class="embed-responsive embed-responsive-16by9 iss-video">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/P9C25Un7xaM?si=KzN">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/9YIERCD5PYY?si=mrs5Sh-owt5W_5-k"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
         </div>
     </div>
 </div>

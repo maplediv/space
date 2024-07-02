@@ -9,7 +9,7 @@
 }
 
 .background-container2 {
-    background-image: url('img4.jpg');
+    background-image: url('img2.jpg');
     background-size: cover; /* Ensures the image covers the entire container */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-position: center; 
@@ -26,13 +26,6 @@
     height: 70vh;
     margin-top: 0px;
     margin-bottom: 0px;
-}
-
-/* Add this rule to your CSS sheet */
-.custom-button {
-    background-color: #002C5B;
-    border: 1px solid #002C5B;
-    color: #fff;
 }
 
 
@@ -52,10 +45,6 @@
     color: #fff; /* Change text color on hover */
 }
 
-/* Style the collapsed state of the content */
-#readMoreText {
-    display: none; /* Hide the content by default */
-}
 
 /* Add this rule to style the Galactic Center Sonification section container */
 #galacticCenterContainer {
@@ -96,10 +85,7 @@ body {
     height: 100%;
 }
 
-.embed-responsive iframe {
-    padding-top: 0px;
-    margin-left: 50px; 
-}
+
 
 .text-container {
     text-align: left;
@@ -241,12 +227,6 @@ body {
     vertical-align: middle;
 }
 
-/* Define a new class for the background image */
-
-
-
-
-
 @media (max-width: 393px) {
     .background-container1,
     .background-container2,
@@ -277,13 +257,6 @@ body {
 .overlay-content h2 {
     margin: 0; /* Remove default margins */
 }
-
-
-
-/* Specific backgrounds for each container */
-
-
-   
     .table{
         margin-bottom: 0px;
     }
@@ -296,7 +269,7 @@ body {
         border-collapse: collapse;
         background-color: #2D2F31; /* Set table background to black */
         color: white; /* Set text color to white */
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }  
 
     .apod{
@@ -314,7 +287,7 @@ body {
     }
     h1 {
         font-size: 32px !important;
-        margin-bottom: 20px;
+        margin-bottom: 20px !important;
         margin-top: 20px;
       }
     
@@ -323,7 +296,7 @@ body {
       }
       .btn {
         margin-bottom: 0px !important;
-        margin-top: 40px !important; 
+        margin-top: 20px !important; 
         padding: 15px;
         margin-right: 0px !important;
     }
@@ -334,6 +307,9 @@ body {
         border: #000000;
     }
     
+    .iss-video{
+        margin-bottom: 20px !important;
+    }
     .embed-responsive{
     margin-bottom: 0px;
     margin-top: 20px;
@@ -344,9 +320,338 @@ body {
   }
 
     }
-@media screen and (max-width: 769px) {
-    .embed-responsive iframe {
-        margin-left: 0; /* Remove the left margin */
-    }
-}
+    @media (min-width: 394px) and (max-width: 768px) {
 
+        
+
+        
+        .background-container1,
+        .background-container2,
+        .background-container3 {
+            position: relative; /* Ensure the container is positioned relatively */
+            width: 100%;
+            height: 70vh; /* Set height to 70% of the viewport height */
+            background-size: cover;
+            background-position: center;
+            display: flex; /* Use Flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+           
+        }
+    
+        .overlay-content {
+            position: relative; /* Position content relative to .background-container */
+            text-align: center; /* Center text horizontally */
+            color: white; /* Text color */
+            width: 100%; /* Ensure content spans full width */
+            
+        }
+    
+    
+    
+    
+    .overlay-content h1,
+    .overlay-content h2 {
+        margin: 0; /* Remove default margins */
+    }
+        .table{
+            margin-bottom: 0px;
+        }
+    .pfoot{
+        color:#000000
+    }
+        .neo-table {
+            width: 100%; /* Set table width to 100% of its container */
+            margin: 0 auto; /* Center the table horizontally */
+            border-collapse: collapse;
+            background-color: #2D2F31; /* Set table background to black */
+            color: white; /* Set text color to white */
+            margin-bottom: 20px;
+        }  
+    
+        .apod{
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+        .bgrnd{
+           color: #ffffff;
+        }
+        .responsive-text {
+            font-size: 16px; /* Adjust font size as needed */
+            line-height: 1.5;
+            padding: 0px !important;
+            margin-bottom: 0px !important;
+        }
+        h1 {
+            font-size: 40px !important;
+            margin-bottom: 20px !important;
+            margin-top: 20px !important;
+          }
+        
+          h2 {
+            font-size: 32px !important;
+          }
+          .btn {
+            margin-bottom: 0px !important;
+            margin-top: 40px !important; 
+            padding: 15px;
+            margin-right: 0px !important;
+        }
+        
+        .btn-primary{
+            color: #ffffff !important;
+            background-color: #000000;
+            border: #000000;
+        }
+        
+        .iss-video{
+            margin-bottom: 20px !important;
+            margin-left: 0px !important;
+        }
+        .embed-responsive{
+        margin-bottom: 0px;
+        margin-top: 20px;
+        margin-left: 0px !important;
+        }
+        .full-width-mobile {
+        width: 40%;
+        margin-bottom: 0px; /* Add margin if you need spacing between buttons */
+      }
+
+    }
+
+
+    @media (min-width: 769px) {
+
+        .row {
+            display: flex; /* Use flexbox for row alignment */
+            justify-content: center; /* Center columns within row */
+        }
+
+        .col-md-6 {
+            flex: 1; /* Allow column to grow to fill available space */
+            max-width: 100%; /* Set maximum width to 100% */
+        }
+       
+
+        #galacticCenterContainer {
+            padding: 0px; /* Optional: Add padding around the content */
+        }
+        
+        #galacticCenterContent {
+            max-width: 100%; /* Ensure content does not exceed viewport width */
+            margin: 0 auto; /* Center the content horizontally */
+        }
+
+        .th,td{
+            color: #ffffff;
+        }
+
+        .background-container1,
+        .background-container2,
+        .background-container3 {
+            position: relative; /* Ensure the container is positioned relatively */
+            width: 100%;
+            height: 70vh; /* Set height to 70% of the viewport height */
+            background-size: cover;
+            background-position: center;
+            display: flex; /* Use Flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+           
+        }
+    
+        .overlay-content {
+            position: relative; /* Position content relative to .background-container */
+            text-align: center; /* Center text horizontally */
+            color: white; /* Text color */
+            width: 100%; /* Ensure content spans full width */
+            
+        }
+    
+    
+    
+    
+    .overlay-content h1,
+    .overlay-content h2 {
+        margin: 0; /* Remove default margins */
+    }
+        .table{
+            margin-bottom: 0px;
+        }
+    .pfoot{
+        color:#000000
+    }
+        .neo-table {
+            width: 100%; /* Set table width to 100% of its container */
+            margin: 0 auto; /* Center the table horizontally */
+            border-collapse: collapse;
+            background-color: #2D2F31; /* Set table background to black */
+            color: white; /* Set text color to white */
+            margin-bottom: 20px;
+        }  
+    
+        .apod{
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+        .bgrnd{
+           color: #ffffff;
+        }
+        .responsive-text {
+            font-size: 16px; /* Adjust font size as needed */
+            line-height: 1.5;
+            padding: 0px !important;
+            margin-bottom: 0px !important;
+        }
+        h1 {
+            font-size: 40px !important;
+            margin-bottom: 20px !important;
+            margin-top: 20px !important;
+          }
+        
+          h2 {
+            font-size: 36px !important;
+          }
+          .btn {
+            margin-bottom: 0px !important;
+            margin-top: 40px !important; 
+            padding: 15px;
+            margin-right: 0px !important;
+        }
+        
+        .btn-primary{
+            color: #ffffff !important;
+            background-color: #000000;
+            border: #000000;
+        }
+        
+        .iss-video{
+            margin-bottom: 20px !important;
+            margin-left: 0px !important;
+        }
+        .embed-responsive{
+        margin-bottom: 0px;
+        margin-top: 20px;
+        margin-left: 0px !important;
+        }
+        .full-width-mobile {
+        width: 40%;
+        margin-bottom: 0px; /* Add margin if you need spacing between buttons */
+      }
+
+    }
+    
+
+
+@media (min-width: 1440px)  {
+
+    .row {
+        display: flex; /* Use flexbox for row alignment */
+        justify-content: center; /* Center columns within row */
+    }
+
+    .col-md-6 {
+        flex: 1; /* Allow column to grow to fill available space */
+        max-width: 100%; /* Set maximum width to 100% */
+    }
+    .embed-responsive iframe {
+        padding-top: 0px;
+        margin-left: 0px; 
+    }
+
+    .background-container1,
+        .background-container2,
+        .background-container3 {
+            position: relative; /* Ensure the container is positioned relatively */
+            width: 100%;
+            height: 70vh; /* Set height to 70% of the viewport height */
+            background-size: cover;
+            background-position: center;
+            display: flex; /* Use Flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+           
+        }
+    
+        .overlay-content {
+            position: relative; /* Position content relative to .background-container */
+            text-align: center; /* Center text horizontally */
+            color: white; /* Text color */
+            width: 100%; /* Ensure content spans full width */
+            
+        }
+    
+    
+    
+    
+    .overlay-content h1,
+    .overlay-content h2 {
+        margin: 0; /* Remove default margins */
+    }
+        .table{
+            margin-bottom: 0px;
+        }
+    .pfoot{
+        color:#000000
+    }
+        .neo-table {
+            width: 150%; /* Set table width to 100% of its container */
+            margin: 0 auto; /* Center the table horizontally */
+            border-collapse: collapse;
+            background-color: #2D2F31; /* Set table background to black */
+            color: white; /* Set text color to white */
+            margin-bottom: 20px;
+        }  
+
+        .table{
+            margin: 0px;
+          }
+    
+        .apod{
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+        .bgrnd{
+           color: #ffffff;
+        }
+        .responsive-text {
+            font-size: 16px; /* Adjust font size as needed */
+            line-height: 1.5;
+            padding: 0px !important;
+            margin-bottom: 0px !important;
+        }
+        h1 {
+            font-size: 40px !important;
+            margin-bottom: 20px !important;
+            margin-top: 20px !important;
+          }
+        
+          h2 {
+            font-size: 36px !important;
+          }
+          .btn {
+            margin-bottom: 0px !important;
+            margin-top: 40px !important; 
+            padding: 15px;
+            margin-right: 0px !important;
+        }
+        
+        .btn-primary{
+            color: #ffffff !important;
+            background-color: #000000;
+            border: #000000;
+        }
+        
+        .iss-video{
+            margin-bottom: 20px !important;
+            margin-left: 0px !important;
+        }
+        .full-width-mobile {
+        width: 20%;
+        margin-bottom: 0px; /* Add margin if you need spacing between buttons */
+      }
+
+      
+
+    }
