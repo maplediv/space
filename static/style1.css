@@ -1,3 +1,77 @@
+.background-container1 {
+    background-image: url('img1.jpg');
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; 
+    height: 70vh;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.background-container2 {
+    background-image: url('img4.jpg');
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; 
+    height: 70vh;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.background-container3 {
+    background-image: url('img7.jpg');
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; 
+    height: 70vh;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Add this rule to your CSS sheet */
+.custom-button {
+    background-color: #002C5B;
+    border: 1px solid #002C5B;
+    color: #fff;
+}
+
+
+.custom-button {
+    background-color: #002C5B;
+    border: 1px solid #002C5B;
+    color: #fff;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to indicate interactivity */
+    transition: background-color 0.3s, color 0.3s; /* Add smooth transition effect */
+}
+
+/* Style the button on hover */
+.custom-button:hover {
+    background-color: #001A35; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+/* Style the collapsed state of the content */
+#readMoreText {
+    display: none; /* Hide the content by default */
+}
+
+/* Add this rule to style the Galactic Center Sonification section container */
+#galacticCenterContainer {
+    background-color: #2D2F31; /* Set black background color */
+    color: #fff; /* Set white text color */
+    margin-bottom: 0; /* Remove margin bottom for the section container */
+    padding-right: 0px; 
+    padding-left: 0px;
+}
+
+#galacticCenterContent {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
 
 .responsive-text {
     font-size: 16px; /* Adjust font size as needed */
@@ -25,116 +99,6 @@ body {
 .embed-responsive iframe {
     padding-top: 0px;
     margin-left: 50px; 
-}
-
-
-@media (max-width: 393px) {
-
-   .background-container {
-    background-size: cover; /* Ensures the image covers the entire container */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center; /* Centers the background image */
-    height: 20vh; /* Adjust the height as needed */
-    position: relative; /* Ensure positioning context for absolute positioning */
-}
-
-.overlay-content {
-    position: absolute; /* Position content relative to .background-container */
-    top: 50%; /* Position content vertically centered */
-    left: 0; /* Ensure content spans full width */
-    width: 100%; /* Ensure content spans full width */
-    transform: translateY(-50%); /* Center vertically */
-    text-align: center; /* Center text horizontally */
-    color: white; /* Text color */
-}
-
-.overlay-content h1,
-.overlay-content h2 {
-    margin: 0; /* Remove default margins */
-}
-
-.overlay-content button {
-    margin-top: 20px; /* Adjust spacing as needed */
-}
-
-/* Specific backgrounds for each container */
-.background-container1 {
-    background-image: url('img1.jpg'); /* Replace 'img1.jpg' with your actual image path */
-}
-
-.background-container2 {
-    background-image: url('img2.jpg'); /* Replace 'img2.jpg' with your actual image path */
-}
-
-.background-container3 {
-    background-image: url('img3.jpg'); /* Replace 'img3.jpg' with your actual image path */
-}
-
-   
-    .table{
-        margin-bottom: 0px;
-    }
-.pfoot{
-    color:#000000
-}
-    .neo-table {
-        width: 100%; /* Set table width to 100% of its container */
-        margin: 0 auto; /* Center the table horizontally */
-        border-collapse: collapse;
-        background-color: #2D2F31; /* Set table background to black */
-        color: white; /* Set text color to white */
-        margin-bottom: 40px;
-    }  
-
-    .apod{
-        margin-top: 40px;
-        margin-bottom: 10px;
-    }
-    .bgrnd{
-       color: #ffffff;
-    }
-    .responsive-text {
-        font-size: 16px; /* Adjust font size as needed */
-        line-height: 1.5;
-        padding: 0px !important;
-        margin-bottom: 0px !important;
-    }
-    h1 {
-        font-size: 32px !important;
-        margin-bottom: 20px;
-        margin-top: 20px;
-      }
-    
-      h2 {
-        font-size: 28px !important;
-      }
-      .btn {
-        margin-bottom: 0px !important;
-        margin-top: 40px !important; 
-        padding: 15px;
-        margin-right: 0px !important;
-    }
-    
-    .btn-primary{
-        color: #ffffff !important;
-        background-color: #000000;
-        border: #000000;
-    }
-    
-    .embed-responsive{
-    margin-bottom: 0px;
-    margin-top: 20px;
-    }
-    .full-width-mobile {
-    width: 80%;
-    margin-bottom: 0px; /* Add margin if you need spacing between buttons */
-  }
-
-    }
-@media screen and (max-width: 769px) {
-    .embed-responsive iframe {
-        margin-left: 0; /* Remove the left margin */
-    }
 }
 
 .text-container {
@@ -279,68 +243,108 @@ body {
 
 /* Define a new class for the background image */
 
-container-fluid{
-    height: 50vh;
-}
 
-.background-container1 {
-    background-image: url('img1.jpg');
-    background-size: cover; /* Ensures the image covers the entire container */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center; 
-    height: 70vh;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
 
-.background-container2 {
-    background-image: url('img4.jpg');
 
-}
 
+@media (max-width: 393px) {
+
+    .background-container1,
+.background-container2,
 .background-container3 {
-    background-image: url('img7.jpg');
+    position: relative; /* Ensure the container is positioned relatively */
+    width: 100%;
+    height: 50vh; /* Set height to 70% of the viewport height */
+    background-size: cover;
+    background-position: center;
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
 
-/* Add this rule to your CSS sheet */
-.custom-button {
-    background-color: #002C5B;
-    border: 1px solid #002C5B;
-    color: #fff;
+.overlay-content {
+    text-align: center; /* Center text horizontally */
+    color: white; /* Text color */
+    width: 100%; /* Ensure content spans full width */
 }
 
 
-.custom-button {
-    background-color: #002C5B;
-    border: 1px solid #002C5B;
-    color: #fff;
-    padding: 10px 20px; /* Adjust padding as needed */
-    border-radius: 5px; /* Add rounded corners */
-    cursor: pointer; /* Change cursor to indicate interactivity */
-    transition: background-color 0.3s, color 0.3s; /* Add smooth transition effect */
+
+
+.overlay-content h1,
+.overlay-content h2 {
+    margin: 0; /* Remove default margins */
 }
 
-/* Style the button on hover */
-.custom-button:hover {
-    background-color: #001A35; /* Change background color on hover */
-    color: #fff; /* Change text color on hover */
+
+
+/* Specific backgrounds for each container */
+
+
+   
+    .table{
+        margin-bottom: 0px;
+    }
+.pfoot{
+    color:#000000
+}
+    .neo-table {
+        width: 100%; /* Set table width to 100% of its container */
+        margin: 0 auto; /* Center the table horizontally */
+        border-collapse: collapse;
+        background-color: #2D2F31; /* Set table background to black */
+        color: white; /* Set text color to white */
+        margin-bottom: 40px;
+    }  
+
+    .apod{
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+    .bgrnd{
+       color: #ffffff;
+    }
+    .responsive-text {
+        font-size: 16px; /* Adjust font size as needed */
+        line-height: 1.5;
+        padding: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    h1 {
+        font-size: 32px !important;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+    
+      h2 {
+        font-size: 28px !important;
+      }
+      .btn {
+        margin-bottom: 0px !important;
+        margin-top: 40px !important; 
+        padding: 15px;
+        margin-right: 0px !important;
+    }
+    
+    .btn-primary{
+        color: #ffffff !important;
+        background-color: #000000;
+        border: #000000;
+    }
+    
+    .embed-responsive{
+    margin-bottom: 0px;
+    margin-top: 20px;
+    }
+    .full-width-mobile {
+    width: 80%;
+    margin-bottom: 0px; /* Add margin if you need spacing between buttons */
+  }
+
+    }
+@media screen and (max-width: 769px) {
+    .embed-responsive iframe {
+        margin-left: 0; /* Remove the left margin */
+    }
 }
 
-/* Style the collapsed state of the content */
-#readMoreText {
-    display: none; /* Hide the content by default */
-}
-
-/* Add this rule to style the Galactic Center Sonification section container */
-#galacticCenterContainer {
-    background-color: #2D2F31; /* Set black background color */
-    color: #fff; /* Set white text color */
-    margin-bottom: 0; /* Remove margin bottom for the section container */
-    padding-right: 0px; 
-    padding-left: 0px;
-}
-
-#galacticCenterContent {
-    padding-left: 40px;
-    padding-right: 40px;
-}
