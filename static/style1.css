@@ -476,8 +476,9 @@ body {
     .overlay-content h2 {
         margin: 0; /* Remove default margins */
     }
-        .table{
-            margin-bottom: 0px;
+        .table,table-bordered{
+            margin: 0px !important;
+            padding: 0px !important;
         }
     .pfoot{
         color:#000000
@@ -492,7 +493,7 @@ body {
         }  
     
         .apod{
-            margin-top: 40px;
+            margin-top: 30px;
             margin-bottom: 10px;
         }
         .bgrnd{
@@ -536,7 +537,7 @@ body {
         margin-left: 0px !important;
         }
         .full-width-mobile {
-        width: 40%;
+        width: 15%;
         margin-bottom: 0px; /* Add margin if you need spacing between buttons */
       }
 
@@ -609,7 +610,7 @@ body {
           }
     
         .apod{
-            margin-top: 40px;
+            margin-top: 30px;
             margin-bottom: 10px;
         }
         .bgrnd{
