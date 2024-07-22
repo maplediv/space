@@ -296,7 +296,7 @@ body {
       }
       .btn {
         margin-bottom: 0px !important;
-        margin-top: 20px !important; 
+        margin-top: 35px !important; 
         padding: 15px;
         margin-right: 0px !important;
     }
@@ -393,7 +393,7 @@ body {
           }
           .btn {
             margin-bottom: 0px !important;
-            margin-top: 20px !important; 
+            margin-top: 35px !important; 
             padding: 15px;
             margin-right: 0px !important;
         }
@@ -516,7 +516,7 @@ body {
           }
           .btn {
             margin-bottom: 0px !important;
-            margin-top: 20px !important; 
+            margin-top: 35px !important; 
             padding: 15px;
             margin-right: 0px !important;
         }
@@ -537,7 +537,7 @@ body {
         margin-left: 0px !important;
         }
         .full-width-mobile {
-        width: 15%;
+        width: 10%;
         margin-bottom: 0px; /* Add margin if you need spacing between buttons */
       }
 
@@ -633,7 +633,7 @@ body {
           }
           .btn {
             margin-bottom: 0px !important;
-            margin-top: 20px !important; 
+            margin-top: 35px !important; 
             padding: 15px;
             margin-right: 0px !important;
         }
@@ -649,7 +649,7 @@ body {
             margin-left: 0px !important;
         }
         .full-width-mobile {
-        width: 20%;
+        width: 8%;
         margin-bottom: 0px; /* Add margin if you need spacing between buttons */
       }
 
