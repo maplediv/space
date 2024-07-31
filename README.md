@@ -14,12 +14,13 @@ Clean and user-friendly interface.
 Technologies Used
 Backend: Flask, Python
 Frontend: JavaScript, HTML, CSS
-APIs: NASA APIs (APOD, Mars Rover Photos, etc.)
+Version Control: Git
+APIs: NASA APIs (APOD, ISS, etc.)
 
 API Reference
 This project utilizes several of NASA's APIs to fetch data:
 
 APOD (Astronomy Picture of the Day)
-https://api.nasa.gov/
-Mars Rover Photos
+International Space Station
+Asteroids - NeoWs (Near Earth Object Web Service)
 https://api.nasa.gov/
