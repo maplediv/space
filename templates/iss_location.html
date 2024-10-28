@@ -17,19 +17,18 @@
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <img src="{{ url_for('static', filename='slogo.svg') }}" alt="Logo" width="92" height="24
-                    class="d-inline-block align-top">
+            <a class="navbar-brand" href="#">
+                <div class="logo-container">
+                    <img src="{{ url_for('static', filename='slogo.svg') }}" alt="Logo" width="92" height="24" class="logo d-inline-block align-top">
+                </div>
             </a>
-            <!-- Navbar toggler for small screens -->
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <!-- Navbar items (right-aligned) -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home</a>
                     </li>
@@ -41,6 +40,17 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/neo">NEO</a>
+                    </li>
+                    <li class="nav-item">
+                        {% if username %}
+                            <a class="nav-link" href="#" id="profileName" data-toggle="modal" data-target="#profileModal">Hello, {{ username }}!</a>
+                        {% else %}
+                            <a class="navbar-brand" href="/login">
+                                <div class="logo-container">
+                                    <img src="{{ url_for('static', filename='login.svg') }}" alt="Login" width="24" height="24" class="logo d-inline-block align-top">
+                                </div>
+                            </a>
+                        {% endif %}
                     </li>
                 </ul>
             </div>
@@ -87,11 +97,7 @@
 
                 <div class="col-md-6">
                     <div class="embed-responsive embed-responsive-16by9 iss-video">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/P9C25Un7xaM?si=KzNOBFU7Hb2sPV-k"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/a-flzdifn54?si=GZEocumjfLA4yYuV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

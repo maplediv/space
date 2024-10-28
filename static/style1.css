@@ -1,33 +1,80 @@
+.logincontainer {
+    display: inline-block;
+    text-align: center;
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+
+.login {
+    width: 24px; /* Adjust width as needed */
+    height: 24px; /* Adjust height as needed */
+    vertical-align: middle;
+}
+
+.form-center-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh; /* Full viewport height */
+}
+
 .background-container1 {
     background-image: url('img1.jpg');
-    background-size: cover; /* Ensures the image covers the entire container */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center; 
-    height: 70vh;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    height: 70vh; /* Or adjust this based on your requirements */
+    margin-top: 0;
+    margin-bottom: 50px;
 }
 
 .background-container2 {
     background-image: url('img2.jpg');
-    background-size: cover; /* Ensures the image covers the entire container */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center; 
     height: 70vh;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 50px;
 }
 
 .background-container3 {
     background-image: url('img7.jpg');
-    background-size: cover; /* Ensures the image covers the entire container */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center; 
     height: 70vh;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    padding-bottom: 50px; /* Spacer for footer */
+    margin-bottom: 50px;
 }
 
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;  /* Example background color */
+    color: #000000;
+    padding: 50px 0;
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footerform {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;  /* Example background color */
+    color: #000000;
+    padding: 50px 0;
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2D2F31;
+    font-family: 'Roboto', sans-serif;
+}
 
 .custom-button {
     background-color: #002C5B;
@@ -67,10 +114,7 @@
     line-height: 1.5;
     padding: 0px !important;
 }
-body {
-    margin: 0;
-    padding: 0;
-}
+
 
 /* Define a custom header class */
 .custom-header {
@@ -92,8 +136,6 @@ body {
     margin-bottom: 20px; /* Adjust margin as needed */
 }
 
-/* Add this rule for the responsive paragraph of text */
-
 
 .audio-container {
     text-align: left;
@@ -112,19 +154,14 @@ img {
     margin: 0 auto; /* To center the image horizontally */
 }
 
-/* Body styles */
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
 /* Navbar styles */
 .navbar {
-    padding: 20px 20px; 
+    padding: 40px 40px; 
     background-color: #fff; /* Set your desired background color */
 }
 
 .navbar-brand img {
-    margin-right: 10px;
+    margin-right: 0px;
 }
 
 /* Navbar link styles */
@@ -141,6 +178,11 @@ body {
     color: #007bff; /* Set your desired hover color */
 }
 
+.navbar-nav .nav-link img {
+    vertical-align: middle; /* Aligns with text baseline */
+    margin-top: -2px; /* Adjust if necessary */
+}
+
 /* Navbar dropdown styles */
 .dropdown-menu {
     background-color: #fff; /* Set your desired background color */
@@ -150,26 +192,9 @@ body {
 /* Common styles for background containers */
 .background-container,
 .container-api,
-.footer,
 .social-icons {
     text-align: left;
 }
-
-/* Background container styles */
-.background-container {
-    position: relative;
-    width: 100vw; /* Use 100vw for the full width of the viewport */
-    min-height: 100vh; /* Set the minimum height to cover the entire viewport */
-    margin-bottom: 0;
-    padding: 20px;
-    color: #fff;
-    background-position: center;
-    background-size: cover; /* Ensure the background image scales responsively */
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Center the content vertically */
-}
-
 
 
 .container-api img {
@@ -205,13 +230,6 @@ body {
     padding-right: 50px;
 }/* Add this rule for the container-api class */
 
-.footer {
-    background-color: #f8f9fa; /* Bootstrap light gray background color */
-    padding: 20px 0;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 0; /* Ensure no margin at the bottom of the footer */
-}
 
 /* Social icons styles */
 .social-icons {
@@ -231,15 +249,38 @@ body {
     .background-container1,
     .background-container2,
     .background-container3 {
-        position: relative; /* Ensure the container is positioned relatively */
+        position: relative;
         width: 100%;
-        height: 70vh; /* Set height to 70% of the viewport height */
+        min-height: 100vh; /* Ensures the container covers the full viewport height */
         background-size: cover;
         background-position: center;
-        display: flex; /* Use Flexbox for centering */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
        
+    }
+
+    .logincontainer {
+        display: inline-block;
+        text-align: center;
+        padding-right: 0rem;
+        padding-left: 0rem;
+    }
+
+    .btn {
+        margin-bottom: 0px !important;
+        margin-top: 35px !important; 
+        padding: 15px;
+        margin-right: 0px !important;
+        width: 90%;
+    }
+    
+    .btn-primary{
+        color: #ffffff !important;
+        background-color: #000000;
+        border: #000000;
     }
 
     .overlay-content {
@@ -294,18 +335,7 @@ body {
       h2 {
         font-size: 28px !important;
       }
-      .btn {
-        margin-bottom: 0px !important;
-        margin-top: 35px !important; 
-        padding: 15px;
-        margin-right: 0px !important;
-    }
-    
-    .btn-primary{
-        color: #ffffff !important;
-        background-color: #000000;
-        border: #000000;
-    }
+     
     
     .iss-video{
         margin-bottom: 20px !important;
@@ -314,28 +344,41 @@ body {
     margin-bottom: 0px;
     margin-top: 20px;
     }
-    .full-width-mobile {
-    width: 80%;
-    margin-bottom: 0px; /* Add margin if you need spacing between buttons */
-  }
+    
 
     }
     @media (min-width: 394px) and (max-width: 768px) {
 
         
+        .btn {
+            margin-bottom: 0px !important;
+            margin-top: 35px !important; 
+            padding: 15px;
+            margin-right: 0px !important;
+            max-width: 50%; /* Set max width to 50% */
+            width: 100%; /* Make button take full width of its container */
+        }
+        
+        .btn-primary{
+            color: #ffffff !important;
+            background-color: #000000;
+            border: #000000;
+        }
 
         
         .background-container1,
         .background-container2,
         .background-container3 {
-            position: relative; /* Ensure the container is positioned relatively */
-            width: 100%;
-            height: 70vh; /* Set height to 70% of the viewport height */
-            background-size: cover;
-            background-position: center;
-            display: flex; /* Use Flexbox for centering */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
+        position: relative;
+        width: 100%;
+        min-height: 100vh; /* Ensures the container covers the full viewport height */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
            
         }
     
@@ -346,8 +389,6 @@ body {
             width: 100%; /* Ensure content spans full width */
             
         }
-    
-    
     
     
     .overlay-content h1,
@@ -391,18 +432,7 @@ body {
           h2 {
             font-size: 32px !important;
           }
-          .btn {
-            margin-bottom: 0px !important;
-            margin-top: 35px !important; 
-            padding: 15px;
-            margin-right: 0px !important;
-        }
-        
-        .btn-primary{
-            color: #ffffff !important;
-            background-color: #000000;
-            border: #000000;
-        }
+          
         
         .iss-video{
             margin-bottom: 20px !important;
@@ -413,10 +443,7 @@ body {
         margin-top: 20px;
         margin-left: 0px !important;
         }
-        .full-width-mobile {
-        width: 40%;
-        margin-bottom: 0px; /* Add margin if you need spacing between buttons */
-      }
+       
 
     }
 
@@ -450,14 +477,16 @@ body {
         .background-container1,
         .background-container2,
         .background-container3 {
-            position: relative; /* Ensure the container is positioned relatively */
-            width: 100%;
-            height: 70vh; /* Set height to 70% of the viewport height */
-            background-size: cover;
-            background-position: center;
-            display: flex; /* Use Flexbox for centering */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
+            position: relative;
+        width: 100%;
+        min-height: 100vh; /* Ensures the container covers the full viewport height */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
            
         }
     
@@ -537,7 +566,7 @@ body {
         margin-left: 0px !important;
         }
         .full-width-mobile {
-        width: 10%;
+        width: 90%;
         margin-bottom: 0px; /* Add margin if you need spacing between buttons */
       }
 
@@ -562,18 +591,20 @@ body {
     }
 
     .background-container1,
-        .background-container2,
-        .background-container3 {
-            position: relative; /* Ensure the container is positioned relatively */
-            width: 100%;
-            height: 70vh; /* Set height to 70% of the viewport height */
-            background-size: cover;
-            background-position: center;
-            display: flex; /* Use Flexbox for centering */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-           
-        }
+    .background-container2,
+    .background-container3 {
+        position: relative;
+        width: 100%;
+        min-height: 100vh; /* Ensures the container covers the full viewport height */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    }
+}
     
         .overlay-content {
             position: relative; /* Position content relative to .background-container */
@@ -655,4 +686,4 @@ body {
 
       
 
-    }
+    
