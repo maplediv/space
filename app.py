@@ -5,19 +5,18 @@ from flask_sqlalchemy import SQLAlchemy
 import requests
 from datetime import datetime, timedelta, date
 import bcrypt
-from config import Config
-from models import db, User
 from flask_migrate import Migrate
 
-
-
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = f"postgresql://{os.environ['DB_USER']}:{os.environ['DB_PASSWORD']}@{os.environ['DB_HOST']}/{os.environ['DB_NAME']}"
+
+# Directly hardcode your database URL here
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://space_435o_user:NSxuMUOyd51S2XUnksAEKCNTklNZbIuu@dpg-csh6vno8fa8c73f752hg-a.oregon-postgres.render.com/space_435o'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = os.urandom(24)
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
+
 # User Model
 class User(db.Model):
     __tablename__ = 'users'  # Ensure this matches your table name
@@ -60,16 +59,13 @@ def sign_up():
             db.session.commit()
             flash('Registration successful! You can now log in.', 'success')
             return redirect(url_for('login'))
-        except IntegrityError:
+        except Exception as e:
             db.session.rollback()  # In case another error slips through
-            flash('An unexpected error occurred. Please try again.', 'danger')
+            flash(f'An unexpected error occurred: {e}', 'danger')
 
     # Render the sign-up template on GET requests
     return render_template('sign_up.html')
 
- # Render the sign-up form
-
-# Login route
 # Login route
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -85,18 +81,14 @@ def login():
 
         # Check if the password matches
         if check_password_hash(user.password_hash, password):
-            # Password matches, proceed with login
             session['user_id'] = user.id
             session['username'] = user.username  # Store username in session
             return redirect(url_for('space'))  # Redirect to the desired page after login
         else:
-            # Password didn't match
             flash('Invalid username or password', 'danger')
 
     return render_template('login.html')
 
-
-# Logout route
 # Logout route
 @app.route('/logout')
 def logout():
@@ -120,7 +112,6 @@ def delete_user():
 
     return redirect(url_for('login'))
 
-
 # Update user details
 @app.route("/update_user", methods=["GET", "POST"])
 def update_user():
@@ -139,16 +130,13 @@ def update_user():
             user.email = email
         if new_password:
             hashed_password = bcrypt.hashpw(new_password.encode('utf-8'), bcrypt.gensalt())
-            user.password = hashed_password
+            user.password_hash = hashed_password  # Update password_hash, not password
 
         db.session.commit()
         flash("User details updated successfully", "success")
         return redirect(url_for("space"))
 
     return render_template("update_user.html", user=user)
-
-# Delete user account
-
 
 # Homepage route
 @app.route("/")
@@ -190,26 +178,21 @@ def apod():
 @app.route("/neo")
 def neo():
     try:
-        # Get the current date and a date 7 days ahead
         current_date = date.today().strftime("%Y-%m-%d")
         end_date = (date.today() + timedelta(days=7)).strftime("%Y-%m-%d")
 
-        # Parameters for the NEO API request
         params = {
             "start_date": current_date,
             "end_date": end_date,
             "api_key": Config.NEO_API_KEY
         }
 
-        # Make the API request to NASA's NEO endpoint
         response = requests.get(Config.NEO_API_BASE_URL + "/feed", params=params)
-        response.raise_for_status()  # Raise an exception for bad responses (4XX, 5XX)
+        response.raise_for_status()
 
-        # Parse the JSON response and get NEO data
         data = response.json()
         neo_objects = data.get("near_earth_objects", {}).get(current_date, [])
 
-        # Extract necessary NEO info
         neo_info = [
             {
                 "name": neo.get("name", "Unknown"),
@@ -218,15 +201,11 @@ def neo():
             for neo in neo_objects
         ]
 
-        # Render the NEO data on the template
         return render_template("neo.html", neo_info=neo_info)
 
     except requests.exceptions.RequestException as e:
-        # Handle API request failure
         return f"Error: Unable to fetch NEO data: {e}"
-
     except KeyError as e:
-        # Handle unexpected data structure
         return f"Error: Missing expected data: {e}"
 
 if __name__ == '__main__':
