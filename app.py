@@ -141,10 +141,8 @@ def update_user():
 # Homepage route
 @app.route("/")
 def space():
-    username = session.get('username')  # Get the username from the session
-    return render_template('space.html', username=username)
+    return render_template("space.html")
 
-# ISS Location route
 @app.route('/iss_location')
 def iss_location():
     try:
@@ -159,7 +157,6 @@ def iss_location():
     except requests.exceptions.RequestException as e:
         return f"Error: Unable to fetch ISS location: {e}"
 
-# APOD Route
 @app.route("/apod")
 def apod():
     try:
@@ -174,43 +171,20 @@ def apod():
     except requests.exceptions.RequestException as e:
         return f"Error: Unable to fetch APOD data: {e}"
 
-# NEO Route
 @app.route("/neo")
 def neo():
     try:
-        # Get the current date and a date 7 days ahead
         current_date = date.today().strftime("%Y-%m-%d")
         end_date = (date.today() + timedelta(days=7)).strftime("%Y-%m-%d")
-
-        # Parameters for the NEO API request
-        params = {
-            "start_date": current_date,
-            "end_date": end_date,
-            "api_key": Config.NEO_API_KEY
-        }
-
-        # Make the API request to NASA's NEO endpoint
+        params = {"start_date": current_date, "end_date": end_date, "api_key": Config.NEO_API_KEY}
         response = requests.get(Config.NEO_API_BASE_URL + "/feed", params=params)
-        response.raise_for_status()  # Raise an exception for bad responses (4XX, 5XX)
-
-        # Parse the JSON response and get NEO data
+        response.raise_for_status()
         data = response.json()
         neo_objects = data.get("near_earth_objects", {}).get(current_date, [])
-
-        # Extract necessary NEO info
-        neo_info = [
-            {
-                "name": neo.get("name", "Unknown"),
-                "approach_date": neo["close_approach_data"][0].get("close_approach_date", "Unknown")
-            }
-            for neo in neo_objects
-        ]
-
-        # Render the NEO data on the template
+        neo_info = [{"name": neo.get("name", "Unknown"), "approach_date": neo.get("close_approach_date", "Unknown")}
+                    for neo in neo_objects]
         return render_template("neo.html", neo_info=neo_info)
-
     except requests.exceptions.RequestException as e:
-        # Handle API request failure
         return f"Error: Unable to fetch NEO data: {e}"
 
     except KeyError as e:
