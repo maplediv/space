@@ -178,21 +178,26 @@ def apod():
 @app.route("/neo")
 def neo():
     try:
+        # Get the current date and a date 7 days ahead
         current_date = date.today().strftime("%Y-%m-%d")
         end_date = (date.today() + timedelta(days=7)).strftime("%Y-%m-%d")
 
+        # Parameters for the NEO API request
         params = {
             "start_date": current_date,
             "end_date": end_date,
             "api_key": Config.NEO_API_KEY
         }
 
+        # Make the API request to NASA's NEO endpoint
         response = requests.get(Config.NEO_API_BASE_URL + "/feed", params=params)
-        response.raise_for_status()
+        response.raise_for_status()  # Raise an exception for bad responses (4XX, 5XX)
 
+        # Parse the JSON response and get NEO data
         data = response.json()
         neo_objects = data.get("near_earth_objects", {}).get(current_date, [])
 
+        # Extract necessary NEO info
         neo_info = [
             {
                 "name": neo.get("name", "Unknown"),
@@ -201,11 +206,15 @@ def neo():
             for neo in neo_objects
         ]
 
+        # Render the NEO data on the template
         return render_template("neo.html", neo_info=neo_info)
 
     except requests.exceptions.RequestException as e:
+        # Handle API request failure
         return f"Error: Unable to fetch NEO data: {e}"
+
     except KeyError as e:
+        # Handle unexpected data structure
         return f"Error: Missing expected data: {e}"
 
 if __name__ == '__main__':
