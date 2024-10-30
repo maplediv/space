@@ -28,29 +28,29 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href="{{ url_for('space') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/apod">APOD</a>
+                        <a class="nav-link" href="{{ url_for('apod') }}">APOD</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/iss_location">ISS</a>
+                        <a class="nav-link" href="{{ url_for('iss_location') }}">ISS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/neo">NEO</a>
+                        <a class="nav-link" href="{{ url_for('neo') }}">NEO</a>
                     </li>
                     <li class="nav-item">
                         {% if username %}
                             <a class="nav-link" href="#" id="profileName" data-toggle="modal" data-target="#profileModal">Hello, {{ username }}!</a>
                         {% else %}
-                            <a class="navbar-brand" href="/login">
+                            <a class="nav-link" href="{{ url_for('login') }}">
                                 <div class="logincontainer">
                                     <img src="{{ url_for('static', filename='login.svg') }}" alt="Login" class="login d-inline-block align-top">
-                                </div>                                
+                                </div>
                             </a>
                         {% endif %}
                     </li>
-                </ul>
+                </ul>                
             </div>
         </div>
     </nav>
