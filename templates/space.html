@@ -26,19 +26,20 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto"> <!-- Added ml-auto here -->
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('space') }}">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('apod') }}">APOD</a>
+                        <a class="nav-link" href="/apod">APOD</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('iss_location') }}">ISS</a>
+                        <a class="nav-link" href="/iss_location">ISS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('neo') }}">NEO</a>
+                        <a class="nav-link" href="/neo">NEO</a>
                     </li>
+                </ul>
                     <li class="nav-item">
                         {% if username %}
                             <a class="nav-link" href="#" id="profileName" data-toggle="modal" data-target="#profileModal">Hello, {{ username }}!</a>
