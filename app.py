@@ -6,6 +6,8 @@ import requests
 from datetime import datetime, timedelta, date
 import bcrypt
 from flask_migrate import Migrate
+from config import Config
+
 
 app = Flask(__name__)
 
