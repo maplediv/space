@@ -51,6 +51,17 @@
     margin-top: 50px;
     font-family: 'Roboto', sans-serif;
 }
+.footerform {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;  /* Example background color */
+    color: #000000;
+    padding: 50px 0;
+    margin-top: 50px;
+    font-family: 'Roboto', sans-serif;
+}
 
 .footer .container {
     display: flex;
@@ -75,23 +86,6 @@
     width: 24px;
     height: 24px;
 }
-
-
-
-.footerform {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f8f9fa;  /* Example background color */
-    color: #000000;
-    padding: 50px 0;
-    margin-top: 50px;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-}
-
-
 
 
 body {

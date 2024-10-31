@@ -149,6 +149,8 @@ def space():
 
 @app.route('/iss_location')
 def iss_location():
+    username = session.get('username')
+    return render_template("iss_location.html", username=username)
     try:
         api_url = 'http://api.open-notify.org/iss-now.json'
         response = requests.get(api_url)
@@ -171,29 +173,47 @@ def apod():
         title = data.get("title", "NASA Astronomy Picture of the Day")
         url = data.get("url", "")
         explanation = data.get("explanation", "")
-        return render_template("apod.html", title=title, url=url, explanation=explanation)
+        
+        # Retrieve username from session
+        username = session.get('username')
+
+        # Pass username to the template
+        return render_template("apod.html", title=title, url=url, explanation=explanation, username=username)
     except requests.exceptions.RequestException as e:
         return f"Error: Unable to fetch APOD data: {e}"
+
 
 @app.route("/neo")
 def neo():
     try:
+        # Retrieve username from session
+        username = session.get('username')
+        
         current_date = date.today().strftime("%Y-%m-%d")
         end_date = (date.today() + timedelta(days=7)).strftime("%Y-%m-%d")
         params = {"start_date": current_date, "end_date": end_date, "api_key": Config.NEO_API_KEY}
+        
         response = requests.get(Config.NEO_API_BASE_URL + "/feed", params=params)
         response.raise_for_status()
+        
         data = response.json()
         neo_objects = data.get("near_earth_objects", {}).get(current_date, [])
-        neo_info = [{"name": neo.get("name", "Unknown"), "approach_date": neo.get("close_approach_date", "Unknown")}
-                    for neo in neo_objects]
-        return render_template("neo.html", neo_info=neo_info)
+        
+        neo_info = [
+            {"name": neo.get("name", "Unknown"), "approach_date": neo.get("close_approach_date", "Unknown")}
+            for neo in neo_objects
+        ]
+        
+        # Pass username and neo_info to the template
+        return render_template("neo.html", neo_info=neo_info, username=username)
+    
     except requests.exceptions.RequestException as e:
         return f"Error: Unable to fetch NEO data: {e}"
-
+    
     except KeyError as e:
         # Handle unexpected data structure
         return f"Error: Missing expected data: {e}"
+
 
 if __name__ == '__main__':
     app.run(debug=True)
