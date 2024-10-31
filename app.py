@@ -143,7 +143,9 @@ def update_user():
 # Homepage route
 @app.route("/")
 def space():
-    return render_template("space.html")
+    username = session.get('username')
+    return render_template("space.html", username=username)
+
 
 @app.route('/iss_location')
 def iss_location():

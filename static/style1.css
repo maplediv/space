@@ -45,13 +45,38 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #f8f9fa;  /* Example background color */
-    color: #000000;
-    padding: 50px 0;
+    background-color: #f8f9fa;  /* Light background color */
+    color: #000000;  /* Dark text color */
+    padding: 50px 0;  /* Generous padding for balanced spacing */
     margin-top: 50px;
-    text-align: center;
     font-family: 'Roboto', sans-serif;
 }
+
+.footer .container {
+    display: flex;
+    align-items: center;
+    max-width: 358px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 10px; /* Minimal spacing between elements */
+}
+
+.footer p {
+    margin: 0;
+    padding-right: 10px; /* Adds slight padding between text and icons */
+}
+
+.footer .social-icons {
+    display: flex;
+    gap: 5px; /* Reduces space between icons */
+}
+
+.footer .social-icons a img {
+    width: 24px;
+    height: 24px;
+}
+
+
 
 .footerform {
     position: fixed;
@@ -191,8 +216,8 @@ img {
 
 /* Common styles for background containers */
 .background-container,
-.container-api,
-.social-icons {
+.container-api
+{
     text-align: left;
 }
 
@@ -229,21 +254,6 @@ img {
     padding-left: 20px;
     padding-right: 50px;
 }/* Add this rule for the container-api class */
-
-
-/* Social icons styles */
-.social-icons {
-    margin-top: 20px; /* Adjust the margin as needed */
-    display: flex;
-    justify-content: center;
-}
-
-.social-icons img {
-    width: 30px; /* Adjust the width of the social media icons as needed */
-    height: 30px; /* Adjust the height of the social media icons as needed */
-    margin: 0 10px; /* Adjust the margin between icons as needed */
-    vertical-align: middle;
-}
 
 @media (max-width: 393px) {
     .background-container1,
