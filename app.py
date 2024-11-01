@@ -9,7 +9,6 @@ from flask_migrate import Migrate
 from dotenv import load_dotenv
 from config import Config
 
-
 # Load environment variables from .env
 load_dotenv()
 
@@ -23,7 +22,7 @@ db_name = os.getenv('DB_NAME', 'your_local_db_name')
 
 # SQLAlchemy configuration
 app.config['SQLALCHEMY_DATABASE_URI'] = (
-    f"postgresql://{db_user}:{db_password}@{db_host}:5432/{db_name}?sslmode=require"
+    f"postgresql://{db_user}:{db_password}@{db_host}/{db_name}"
 )
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -31,6 +30,7 @@ app.config['SECRET_KEY'] = os.urandom(24)
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
+
 
 
 # User Model
