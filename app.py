@@ -149,19 +149,26 @@ def space():
 
 @app.route('/iss_location')
 def iss_location():
-    username = session.get('username')
-    return render_template("iss_location.html", username=username)
     try:
+        # Retrieve username from session
+        username = session.get('username')
+        
         api_url = 'http://api.open-notify.org/iss-now.json'
         response = requests.get(api_url)
         response.raise_for_status()
+        
+        # Extract data from the response
         iss_data = response.json()
         latitude = iss_data['iss_position']['latitude']
         longitude = iss_data['iss_position']['longitude']
         timestamp = iss_data['timestamp']
-        return render_template('iss_location.html', latitude=latitude, longitude=longitude, timestamp=timestamp)
+        
+        # Pass data to the template, including username
+        return render_template("iss_location.html", username=username, latitude=latitude, longitude=longitude, timestamp=timestamp)
+    
     except requests.exceptions.RequestException as e:
         return f"Error: Unable to fetch ISS location: {e}"
+
 
 @app.route("/apod")
 def apod():
