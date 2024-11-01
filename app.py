@@ -12,7 +12,10 @@ from config import Config
 app = Flask(__name__)
 
 # Directly hardcode your database URL here
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://space_435o_user:NSxuMUOyd51S2XUnksAEKCNTklNZbIuu@dpg-csh6vno8fa8c73f752hg-a.oregon-postgres.render.com/space_435o'
+app.config['SQLALCHEMY_DATABASE_URI'] = (
+    f"postgresql://{os.environ['DB_USER']}:{os.environ['DB_PASSWORD']}"
+    f"@{os.environ['DB_HOST']}/{os.environ['DB_NAME']}"
+)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = os.urandom(24)
 
