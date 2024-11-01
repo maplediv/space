@@ -250,6 +250,10 @@ img {
 }/* Add this rule for the container-api class */
 
 @media (max-width: 393px) {
+
+    .neo-table th, .neo-table td {
+        white-space: nowrap; /* Prevents text from wrapping */
+    }
     .background-container1,
     .background-container2,
     .background-container3 {

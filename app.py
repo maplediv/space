@@ -6,21 +6,29 @@ import requests
 from datetime import datetime, timedelta, date
 import bcrypt
 from flask_migrate import Migrate
-from config import Config
+from dotenv import load_dotenv
 
+# Load environment variables from .env
+load_dotenv()
 
 app = Flask(__name__)
 
-# Directly hardcode your database URL here
+# Database credentials and URI setup
+db_user = os.getenv('DB_USER', 'your_local_db_user')
+db_password = os.getenv('DB_PASSWORD', 'your_local_db_password')
+db_host = os.getenv('DB_HOST', 'localhost')  # Set the correct hostname here if different
+db_name = os.getenv('DB_NAME', 'your_local_db_name')
+
+# SQLAlchemy configuration
 app.config['SQLALCHEMY_DATABASE_URI'] = (
-    f"postgresql://{os.environ['DB_USER']}:{os.environ['DB_PASSWORD']}"
-    f"@{os.environ['61e7f4245acb2de64f5f66993c8207ed']}/{os.environ['DB_NAME']}?sslmode=require"
+    f"postgresql://{db_user}:{db_password}@{db_host}/{db_name}?sslmode=require"
 )
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = os.urandom(24)
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
+
 
 # User Model
 class User(db.Model):
