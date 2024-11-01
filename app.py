@@ -22,9 +22,8 @@ db_name = os.getenv('DB_NAME', 'your_local_db_name')
 
 # SQLAlchemy configuration
 app.config['SQLALCHEMY_DATABASE_URI'] = (
-    f"postgresql://{db_user}:{db_password}@{db_host}/{db_name}"
+    f"postgresql://{db_user}:{db_password}@{db_host}/{db_name}?sslmode=require"
 )
-
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = os.urandom(24)
 
