@@ -14,7 +14,7 @@ app = Flask(__name__)
 # Directly hardcode your database URL here
 app.config['SQLALCHEMY_DATABASE_URI'] = (
     f"postgresql://{os.environ['DB_USER']}:{os.environ['DB_PASSWORD']}"
-    f"@{os.environ['DB_HOST']}/{os.environ['DB_NAME']}"
+    f"@{os.environ['dpg-csh6vno8fa8c73f752hg-a']}/{os.environ['DB_NAME']}?sslmode=require"
 )
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = os.urandom(24)
