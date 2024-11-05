@@ -55,32 +55,39 @@
     </nav>
 
     
+    
+       
     <div id="galacticCenterContainer">
         <div class="container" id="galacticCenterContent">
             <div class="row">
                 <div class="col-md-6">
                     <h1>Near Earth Objects</h1>
-                    <div class="table-responsive">
-                        <table class="table table-bordered container neo-table" id="neoTable">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Approach</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for neo_info in neo_info %}
-                                <tr>
-                                    <td>{{ neo_info.name }}</td>
-                                    <td>{{ neo_info.approach_date }}</td>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
+                    <!-- Add the "table-bordered" class for borders around cells -->
+                    <table class="table table-bordered bgrnd">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Approach</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for neo_info in neo_info %}
+                            <tr>
+                                <td>{{ neo_info.name }}</td>
+                                <td>{{ neo_info.approach_date }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
+    </div>
+    
+              
+               
+            
+ 
         <div id="galacticCenterContainer">
             <div class="container" id="galacticCenterContent">
                 <div class="row">

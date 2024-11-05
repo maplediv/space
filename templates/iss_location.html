@@ -56,35 +56,34 @@
             </div>
         </div>
     </nav>
-   
+    <div id="loadingMessage" style="text-align: center; padding: 20px;">
+        <p class="loading">Loading ISS data, please wait...</p>
+    </div>
     <!-- ISS Location Section -->
-    <div id="galacticCenterContainer">
+    <div id="galacticCenterContainer" style="display: none;">
         <div class="container" id="galacticCenterContent">
+            <!-- Content goes here -->
             <div class="row">
                 <div class="col-md-6">
-        <h1>Current ISS Location</h1>
-        <table class="table bgrnd">
-            <thead>
-                <tr>
-                    <th>Latitude</th>
-                    <th>Longitude</th>
-                   
-                    
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>{{ latitude }}</td>
-                    <td>{{ longitude }}</td>
-                    
-                   
-                </tr>
-            </tbody>
-        </table>
+                    <h1>Current ISS Location</h1>
+                    <table class="table table-bordered bgrnd">
+                        <thead>
+                            <tr>
+                                <th>Latitude</th>
+                                <th>Longitude</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{ latitude }}</td>
+                                <td>{{ longitude }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-</div>
-</div>
     <div id="galacticCenterContainer">
         <div class="container" id="galacticCenterContent">
             <div class="row">
@@ -94,11 +93,8 @@
                         The International Space Station (ISS) stands as a remarkable testament to international collaboration in space exploration. Orbiting Earth at an average altitude of approximately 420 kilometers (261 miles), the ISS serves as a microgravity laboratory where astronauts and cosmonauts from various countries conduct scientific research and experiments that benefit humanity.<br><br>  Launched in 1998, the ISS represents a joint effort involving space agencies such as NASA (United States), Roscosmos (Russia), ESA (European Space Agency), JAXA (Japan Aerospace Exploration Agency), and CSA (Canadian Space Agency). 
                     </p>
                 </div>
-
-                <div class="col-md-6">
-                    <div class="embed-responsive embed-responsive-16by9 iss-video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/a-flzdifn54?si=GZEocumjfLA4yYuV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
+                <div class="embed-responsive embed-responsive-16by9 iss-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/a-flzdifn54?si=GZEocumjfLA4yYuV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

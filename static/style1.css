@@ -1,3 +1,7 @@
+.loading{
+    color: #ffffff;
+    margin-top: 40px;
+}
 .logincontainer {
     display: inline-block;
     text-align: center;
@@ -250,10 +254,35 @@ img {
 }/* Add this rule for the container-api class */
 
 @media (max-width: 393px) {
-
-    .neo-table th, .neo-table td {
-        white-space: nowrap; /* Prevents text from wrapping */
+    .row {
+        margin-top: 40px !important;
+        display: flex; /* Use flexbox for row alignment */
+        justify-content: center; /* Center columns within row */
     }
+    .btn-block {
+        max-width: 100% !important;
+        color: #ffffff !important;
+        background-color: hsl(0, 0%, 0%);
+        border: #000000;
+        margin-bottom: 0px !important;
+        margin-top: 35px !important; 
+        padding: 15px;
+        margin-right: 0px !important;
+    }
+    .neo-table {
+        width: 100%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        background-color: #2D2F31;
+        color: white;
+        margin-bottom: 20px;
+        table-layout: fixed; /* Prevents columns from expanding */
+    }
+
+    
+}
+
+
     .background-container1,
     .background-container2,
     .background-container3 {
@@ -299,9 +328,6 @@ img {
         
     }
 
-
-
-
 .overlay-content h1,
 .overlay-content h2 {
     margin: 0; /* Remove default margins */
@@ -312,14 +338,7 @@ img {
 .pfoot{
     color:#000000
 }
-    .neo-table {
-        width: 100%; /* Set table width to 100% of its container */
-        margin: 0 auto; /* Center the table horizontally */
-        border-collapse: collapse;
-        background-color: #2D2F31; /* Set table background to black */
-        color: white; /* Set text color to white */
-        margin-bottom: 20px;
-    }  
+   
 
     .apod{
         margin-top: 40px;
@@ -354,10 +373,30 @@ img {
     }
     
 
-    }
+    
     @media (min-width: 394px) and (max-width: 768px) {
-
         
+        .btn-block {
+            max-width: 100% !important;
+            color: #ffffff !important;
+            background-color: hsl(0, 0%, 0%);
+            border: #000000;
+            margin-bottom: 0px !important;
+            margin-top: 35px !important; 
+            padding: 15px;
+            margin-right: 0px !important;
+        }
+        .row {
+            margin-top: 40px !important;
+            display: flex; /* Use flexbox for row alignment */
+            justify-content: center; /* Center columns within row */
+        }
+
+        .col-md-6 {
+            flex: 1; /* Allow column to grow to fill available space */
+            max-width: 100%; /* Set maximum width to 100% */
+        }
+
         .btn {
             margin-bottom: 0px !important;
             margin-top: 35px !important; 
@@ -410,7 +449,7 @@ img {
         color:#000000
     }
         .neo-table {
-            width: 100%; /* Set table width to 100% of its container */
+            width: 50%; /* Set table width to 100% of its container */
             margin: 0 auto; /* Center the table horizontally */
             border-collapse: collapse;
             background-color: #2D2F31; /* Set table background to black */
@@ -434,7 +473,7 @@ img {
         h1 {
             font-size: 40px !important;
             margin-bottom: 20px !important;
-            margin-top: 20px !important;
+            margin-top: 0px !important;
           }
         
           h2 {
@@ -454,11 +493,24 @@ img {
        
 
     }
-
+    .full-width-mobile {
+        width: 90%;
+        margin-bottom: 0px; /* Add margin if you need spacing between buttons */
+      }
 
     @media (min-width: 769px) {
-
+        .btn-block {
+            max-width: 100% !important;
+            color: #ffffff !important;
+            background-color: hsl(0, 0%, 0%);
+            border: #000000;
+            margin-bottom: 0px !important;
+            margin-top: 35px !important; 
+            padding: 15px;
+            margin-right: 0px !important;
+        }
         .row {
+            margin-top: 60px !important;
             display: flex; /* Use flexbox for row alignment */
             justify-content: center; /* Center columns within row */
         }
@@ -505,9 +557,6 @@ img {
             width: 100%; /* Ensure content spans full width */
             
         }
-    
-    
-    
     
     .overlay-content h1,
     .overlay-content h2 {
@@ -556,6 +605,7 @@ img {
             margin-top: 35px !important; 
             padding: 15px;
             margin-right: 0px !important;
+            max-width: 10%;
         }
         
         .btn-primary{
@@ -583,12 +633,35 @@ img {
 
 
 @media (min-width: 1440px)  {
-
     .row {
+        margin-top: 60px;
         display: flex; /* Use flexbox for row alignment */
         justify-content: center; /* Center columns within row */
     }
-
+    .btn-block {
+        max-width: 100% !important;
+        color: #ffffff !important;
+        background-color: hsl(0, 0%, 0%);
+        border: #000000;
+        margin-bottom: 0px !important;
+        margin-top: 35px !important; 
+        padding: 15px;
+        margin-right: 0px !important;
+    }
+    .btn {
+        margin-bottom: 0px !important;
+        margin-top: 35px !important; 
+        padding: 15px;
+        margin-right: 0px !important;
+        max-width: 10%;
+    }
+    
+    .btn-primary{
+        color: #ffffff !important;
+        background-color: #000000;
+        border: #000000;
+    }
+    
     .col-md-6 {
         flex: 1; /* Allow column to grow to fill available space */
         max-width: 100%; /* Set maximum width to 100% */
@@ -670,18 +743,7 @@ img {
           h2 {
             font-size: 36px !important;
           }
-          .btn {
-            margin-bottom: 0px !important;
-            margin-top: 35px !important; 
-            padding: 15px;
-            margin-right: 0px !important;
-        }
-        
-        .btn-primary{
-            color: #ffffff !important;
-            background-color: #000000;
-            border: #000000;
-        }
+          
         
         .iss-video{
             margin-bottom: 20px !important;
