@@ -17,7 +17,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <div class="logo-container">
                     <img src="{{ url_for('static', filename='slogo.svg') }}" alt="Logo" width="92" height="24" class="logo d-inline-block align-top">
                 </div>
@@ -60,7 +60,7 @@
     <div id="galacticCenterContainer">
         <div class="container" id="galacticCenterContent">
             <div class="row">
-                <div class="col-md-6 apod">
+                <div class="embed-responsive">
                     <img src="{{ url }}" alt="{{ title }}">
                 </div>
                 <div class="col-md-6">
