@@ -254,6 +254,10 @@ img {
 }/* Add this rule for the container-api class */
 
 @media (max-width: 393px) {
+    .apod{
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
     .row {
         margin-top: 40px !important;
         display: flex; /* Use flexbox for row alignment */
@@ -339,11 +343,6 @@ img {
     color:#000000
 }
    
-
-    .apod{
-        margin-top: 40px;
-        margin-bottom: 10px;
-    }
     .bgrnd{
        color: #ffffff;
     }
@@ -355,8 +354,8 @@ img {
     }
     h1 {
         font-size: 32px !important;
-        margin-bottom: 20px !important;
-        margin-top: 20px;
+        margin-bottom: 30px !important;
+        margin-top: 0px !important;
       }
     
       h2 {
@@ -364,12 +363,11 @@ img {
       }
      
     
-    .iss-video{
-        margin-bottom: 20px !important;
-    }
+    
     .embed-responsive{
-    margin-bottom: 0px;
-    margin-top: 20px;
+        margin-bottom: 20px !important;
+        margin-bottom: 0px;
+        margin-top: 0px;
     }
     
 
@@ -457,10 +455,7 @@ img {
             margin-bottom: 20px;
         }  
     
-        .apod{
-            margin-top: 40px;
-            margin-bottom: 10px;
-        }
+        
         .bgrnd{
            color: #ffffff;
         }
@@ -472,7 +467,7 @@ img {
         }
         h1 {
             font-size: 40px !important;
-            margin-bottom: 20px !important;
+            margin-bottom: 30px !important;
             margin-top: 0px !important;
           }
         
@@ -481,13 +476,10 @@ img {
           }
           
         
-        .iss-video{
-            margin-bottom: 20px !important;
-            margin-left: 0px !important;
-        }
+        
         .embed-responsive{
-        margin-bottom: 0px;
-        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-top: 40px;
         margin-left: 0px !important;
         }
        
@@ -578,10 +570,7 @@ img {
             margin-bottom: 20px;
         }  
     
-        .apod{
-            margin-top: 30px;
-            margin-bottom: 10px;
-        }
+        
         .bgrnd{
            color: #ffffff;
         }
@@ -593,8 +582,8 @@ img {
         }
         h1 {
             font-size: 40px !important;
-            margin-bottom: 20px !important;
-            margin-top: 20px !important;
+            margin-bottom: 30px !important;
+            margin-top: 0px !important;
           }
         
           h2 {
@@ -620,7 +609,7 @@ img {
         }
         .embed-responsive{
         margin-bottom: 0px;
-        margin-top: 20px;
+        margin-top: 40px;
         margin-left: 0px !important;
         }
         .full-width-mobile {
@@ -695,9 +684,6 @@ img {
             
         }
     
-    
-    
-    
     .overlay-content h1,
     .overlay-content h2 {
         margin: 0; /* Remove default margins */
@@ -721,10 +707,7 @@ img {
             margin: 0px;
           }
     
-        .apod{
-            margin-top: 30px;
-            margin-bottom: 10px;
-        }
+        
         .bgrnd{
            color: #ffffff;
         }
@@ -736,8 +719,8 @@ img {
         }
         h1 {
             font-size: 40px !important;
-            margin-bottom: 20px !important;
-            margin-top: 20px !important;
+            margin-bottom: 30px !important;
+            margin-top: 0px !important;
           }
         
           h2 {
