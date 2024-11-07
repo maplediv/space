@@ -1,3 +1,65 @@
+.GridListContainer {
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    display: grid;
+    grid-column-start: auto;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 0 auto;
+    max-width: 1890px;
+    padding: 0 16px 60px;
+    position: relative;
+}
+
+#galacticCenterContainer {
+    flex: 1; /* This will push the footer to the bottom when content is insufficient */
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;  /* Light background color */
+    color: #000000;  /* Dark text color */
+    padding: 50px 0;  /* Generous padding for balanced spacing */
+    margin-top: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.footer .container {
+    display: flex;
+    align-items: center;
+    max-width: 358px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 10px; /* Minimal spacing between elements */
+}
+
+.footer p {
+    margin: 0;
+    padding-right: 10px; /* Adds slight padding between text and icons */
+}
+
+.footer .social-icons {
+    display: flex;
+    gap: 5px; /* Reduces space between icons */
+}
+
+.footer .social-icons a img {
+    width: 24px;
+    height: 24px;
+}
 
 .responsive-text {
     font-size: 16px; /* Adjust font size as needed */
@@ -51,52 +113,7 @@
     margin-bottom: 50px;
 }
 
-.footer {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f8f9fa;  /* Light background color */
-    color: #000000;  /* Dark text color */
-    padding: 50px 0;  /* Generous padding for balanced spacing */
-    margin-top: 50px;
-    font-family: 'Roboto', sans-serif;
-}
-.footerform {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f8f9fa;  /* Example background color */
-    color: #000000;
-    padding: 50px 0;
-    margin-top: 50px;
-    font-family: 'Roboto', sans-serif;
-}
 
-.footer .container {
-    display: flex;
-    align-items: center;
-    max-width: 358px;
-    margin: 0 auto;
-    padding: 0 20px;
-    gap: 10px; /* Minimal spacing between elements */
-}
-
-.footer p {
-    margin: 0;
-    padding-right: 10px; /* Adds slight padding between text and icons */
-}
-
-.footer .social-icons {
-    display: flex;
-    gap: 5px; /* Reduces space between icons */
-}
-
-.footer .social-icons a img {
-    width: 24px;
-    height: 24px;
-}
 
 
 body {
@@ -535,7 +552,7 @@ img {
         /* Ensure the image fills the full width of its column */
         .limited-height{
             width: 100%; /* Fill the entire width of the image column */
-            max-height: 300px; /* Maintain aspect ratio */
+            max-height: 500px; /* Maintain aspect ratio */
             object-fit: cover;
             margin-bottom: 20px;
         }
@@ -652,16 +669,27 @@ img {
         margin-left: 40px;
     }
     
+    
     #apodgalacticCenterContent .row {
         display: flex;
         flex-direction: row; /* Align columns side-by-side */
         justify-content: space-between;
         align-items: flex-start;
         }
+
+    #apodgalacticCenterContent {
+            margin-left: 80px;   /* Remove left margin */
+            margin-right: 80px;  /* Remove right margin */
+            padding-left: 0px; /* Optional: Adjust padding to add some space inside */
+            padding-right: 0px; /* Optional: Adjust padding to add some space inside */
+            max-width: 90%;    /* Ensure it takes full width of the container */
+            width: 90%;        /* Ensure it's set to 100% of available space */
+        }
+        
     
         .limited-height{
         width: 100%; /* Fill the entire width of the image column */
-        max-height: 300px; /* Maintain aspect ratio */
+        max-height: 500px; /* Maintain aspect ratio */
         object-fit: cover;
         margin-bottom: 20px;
         }

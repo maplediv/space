@@ -66,8 +66,7 @@
                 <div class="col-md-6">
                     <div class="content">
                         <h1>{{ title }}</h1>
-                        <p class="responsive-text">{{ explanation }}</p>
-                        <br> <!-- Line break added here -->
+                        <p class="responsive-text">{{ explanation | safe }}</p>
                     </div>
                 </div>
             </div>
@@ -80,11 +79,13 @@
         <div class="container">
             <p>&copy; 2024 Space. All rights reserved.</p>
             <div class="social-icons">
-                <a href="https://www.facebook.com/" target="_blank" title="Share on Facebook"><img src="{{ url_for('static', filename='facebook.png') }}" alt="Facebook"></a>
-                <a href="https://www.instagram.com/" target="_blank" title="Share on Instagram"><img src="{{ url_for('static', filename='instagram.png') }}" alt="Instagram"></a>
-                <!-- Add more social media icons as needed -->
+                <a href="https://www.facebook.com/" target="_blank" title="Share on Facebook">
+                    <img src="{{ url_for('static', filename='facebook.png') }}" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" title="Share on Instagram">
+                    <img src="{{ url_for('static', filename='instagram.png') }}" alt="Instagram">
+                </a>
             </div>
-           
         </div>
     </footer>
     

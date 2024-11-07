@@ -193,7 +193,19 @@ def apod():
         title = data.get("title", "NASA Astronomy Picture of the Day")
         url = data.get("url", "")
         explanation = data.get("explanation", "")
-        
+
+        explanation_with_breaks = (
+            explanation
+            .replace(".", ".<br><br>")
+            .replace("?", "?<br><br>")
+            .replace("!", "!<br><br>")
+        )
+
+        print("Formatted explanation:", repr(explanation_with_breaks))    
+
+        print("Explanation content from API:", repr(explanation))
+        print("API Response:", response.json())
+
         # Retrieve username from session
         username = session.get('username')
 
@@ -235,5 +247,6 @@ def neo():
         return f"Error: Missing expected data: {e}"
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
+

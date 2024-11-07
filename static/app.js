@@ -1,17 +1,50 @@
-document.addEventListener('DOMContentLoaded', () => {
-    console.log("Script loaded and DOM fully loaded");
+document.addEventListener("DOMContentLoaded", function() {
+    const explanationElement = document.querySelector(".responsive-text");
+    if (explanationElement) {
+        // Get the raw text
+        let text = explanationElement.textContent;
 
-    const loadingMessage = document.getElementById('loadingMessage');
-    const galacticCenterContainer = document.getElementById('galacticCenterContainer');
+        // Variable to track punctuation count
+        let punctuationCount = 0;
 
-    // Show loading message and hide the main content initially
-    loadingMessage.style.display = 'block';
-    galacticCenterContainer.style.display = 'none';
+        // Replace punctuation with a line break every other time
+        text = text.replace(/([.?!])/g, function(match) {
+            punctuationCount++;
+            // Insert line break after every 2nd punctuation mark
+            if (punctuationCount % 2 === 0) {
+                return match + "<br><br>"; // Add line break after every second punctuation
+            }
+            return match; // Otherwise, just return the punctuation mark
+        });
 
-    // Simulate a data loading delay
-    setTimeout(() => {
-        // This simulates data fetching; remove this if data is rendered server-side
-        loadingMessage.style.display = 'none';
-        galacticCenterContainer.style.display = 'block';
-    }, 2000); // 2 seconds delay, adjust if needed
+        // Update the inner HTML with the line breaks
+        explanationElement.innerHTML = text;
+    }
 });
+
+
+
+
+
+
+
+$(document).ready(function() {
+    $('#load-iss-btn').on('click', function() {
+        // Show the loading message
+        $('#loading-message').show();
+
+        // Make the GET request to the /iss_data route
+        $.get('/iss_data', function(data) {
+            console.log(data); // Log the ISS data to the console (optional)
+
+            // Redirect to the ISS page after the data is loaded
+            window.location.href = '/iss_location';
+        }).fail(function() {
+            // If the request fails, hide the loading message and alert the user
+            $('#loading-message').hide();
+            alert('Error loading ISS data. Please try again later.');
+        });
+    });
+});
+
+
