@@ -11,6 +11,14 @@
     position: relative;
 }
 
+.card {
+margin-bottom: 40px;
+}
+
+.mt-5{
+    margin: 0px !important;
+}
+
 #galacticCenterContainer {
     flex: 1; /* This will push the footer to the bottom when content is insufficient */
 }
@@ -26,6 +34,18 @@ html, body {
 
 .footer {
     position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;  /* Light background color */
+    color: #000000;  /* Dark text color */
+    padding: 50px 0;  /* Generous padding for balanced spacing */
+    margin-top: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footerform {
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -93,11 +113,17 @@ html, body {
     vertical-align: middle;
 }
 
+.formrow{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
 .form-center-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 70vh; /* Full viewport height */
+    min-height: 100vh; /* Full viewport height */
 }
 
 .background-container1 {
