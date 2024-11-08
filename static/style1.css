@@ -32,7 +32,7 @@ html, body {
     background-color: #f8f9fa;  /* Light background color */
     color: #000000;  /* Dark text color */
     padding: 50px 0;  /* Generous padding for balanced spacing */
-    margin-top: 50px;
+    margin-top: 0px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -61,11 +61,20 @@ html, body {
     height: 24px;
 }
 
-.responsive-text {
-    font-size: 16px; /* Adjust font size as needed */
+.apodresponsive-text {
+    font-size: 16px;
     line-height: 1.5;
-    padding: 0px !important;
+    padding: 0 !important;
+    margin-bottom: 40px !important;
 }
+    .responsive-text {
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 0 !important;
+        margin-bottom: 20px !important;
+    }
+
+
 
 .loading{
     color: #ffffff;
@@ -150,8 +159,8 @@ body {
 }
 
 #galacticCenterContent {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 /* Define a custom header class */
@@ -294,7 +303,7 @@ img {
         width: 100%; /* Fill the entire width of the image column */
         height: auto; /* Maintain aspect ratio */
         object-fit: cover;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         }
     .row {
         margin-top: 40px !important;
@@ -367,12 +376,7 @@ img {
     .bgrnd{
        color: #ffffff;
     }
-    .responsive-text {
-        font-size: 16px; /* Adjust font size as needed */
-        line-height: 1.5;
-        padding: 0px !important;
-        margin-bottom: 0px !important;
-    }
+    
     h1 {
         font-size: 32px !important;
         margin-bottom: 30px !important;
@@ -420,7 +424,7 @@ img {
             width: 100%; /* Fill the width of the image column */
             height: auto; /* Maintain aspect ratio */
             object-fit: cover;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
                 }
         
         .btn-block {
@@ -493,12 +497,7 @@ img {
         .bgrnd{
            color: #ffffff;
         }
-        .responsive-text {
-            font-size: 16px; /* Adjust font size as needed */
-            line-height: 1.5;
-            padding: 0px !important;
-            margin-bottom: 0px !important;
-        }
+        
         h1 {
             font-size: 40px !important;
             margin-bottom: 30px !important;
@@ -540,7 +539,7 @@ img {
         
         #galacticCenterContent {
             max-width: 100%; /* Ensure content does not exceed viewport width */
-            margin: 0 auto; /* Center the content horizontally */
+            margin: 0px; /* Center the content horizontally */
         }
         #apodgalacticCenterContent .row {
         display: block;
@@ -554,17 +553,11 @@ img {
             width: 100%; /* Fill the entire width of the image column */
             max-height: 500px; /* Maintain aspect ratio */
             object-fit: cover;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
         
     
-        .responsive-text {
-            font-size: 16px;
-            line-height: 1.5;
-            padding: 0 !important;
-            margin-bottom: 20px !important;
-        }
-    }
+        
 
     
         .btn-block {
@@ -691,7 +684,7 @@ img {
         width: 100%; /* Fill the entire width of the image column */
         max-height: 500px; /* Maintain aspect ratio */
         object-fit: cover;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         }
     
     .row {
@@ -780,12 +773,7 @@ img {
         .bgrnd{
            color: #ffffff;
         }
-        .responsive-text {
-            font-size: 16px; /* Adjust font size as needed */
-            line-height: 1.5;
-            padding: 0px !important;
-            margin-bottom: 0px !important;
-        }
+        
         h1 {
             font-size: 40px !important;
             margin-bottom: 30px !important;

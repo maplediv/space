@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const explanationElement = document.querySelector(".responsive-text");
+    const explanationElement = document.querySelector(".apodresponsive-text");
     if (explanationElement) {
         // Get the raw text
         let text = explanationElement.textContent;
