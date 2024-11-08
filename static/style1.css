@@ -295,8 +295,8 @@ img {
         flex-direction: row; /* Align columns side-by-side */
         justify-content: space-between;
         align-items: flex-start;
-        margin-right: 15px;
-        margin-left: 15px;
+        margin-right: 0px;
+        margin-left: 0px;
         }
     }
         .limited-height{
@@ -390,9 +390,9 @@ img {
     
     
     .embed-responsive{
-        margin-bottom: 20px !important;
+        margin-bottom: 40px !important;
         margin-bottom: 0px;
-        margin-top: 0px;
+        margin-top: 20px;
     }
     
 
@@ -412,12 +412,12 @@ img {
             
         }
     #apodgalacticCenterContent .row {
-        display: block;
+        display: block !important;
         flex-direction: row; /* Align columns side-by-side */
         justify-content: space-between;
         align-items: flex-start;
-        margin-right: 15px;
-        margin-left: 15px;
+        margin-right: 0px;
+        margin-left: 0px;
         }
     }
         .limited-height{
@@ -511,8 +511,8 @@ img {
         
         
         .embed-responsive{
-        margin-bottom: 20px;
-        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-top: 20px;
         margin-left: 0px;
         }
        
@@ -533,6 +533,7 @@ img {
             max-width: 20%;
             width: 30%; 
         }
+    }
         #galacticCenterContainer {
             padding: 0px; /* Optional: Add padding around the content */
         }
@@ -542,11 +543,14 @@ img {
             margin: 0px; /* Center the content horizontally */
         }
         #apodgalacticCenterContent .row {
-        display: block;
-        flex-direction: row; /* Align columns side-by-side */
-        justify-content: space-between;
-        align-items: flex-start;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start; /* Align columns starting from the left */
+            align-items: flex-start;
+            gap: 40px; /* Adjust the gap between columns without large outer margins */
+            padding: 0 10px; /* Adjust padding as needed to control row spacing */
         }
+        
     
         /* Ensure the image fills the full width of its column */
         .limited-height{
@@ -575,7 +579,7 @@ img {
             max-width: 100%; /* Set maximum width to 100% */
         }
         .row {
-            margin-top: 60px !important;
+            margin-top: 40px !important;
             display: flex; /* Use flexbox for row alignment */
             justify-content: center; /* Center columns within row */
         }
@@ -644,8 +648,8 @@ img {
           }
         
         .embed-responsive{
-        margin-bottom: 0px;
-        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-top: 20px;
         margin-left: 0px;
         }
         .full-width-mobile {
@@ -665,18 +669,20 @@ img {
     
     #apodgalacticCenterContent .row {
         display: flex;
-        flex-direction: row; /* Align columns side-by-side */
-        justify-content: space-between;
+        flex-direction: row;
+        justify-content: flex-start; /* Align columns starting from the left */
         align-items: flex-start;
-        }
+        gap: 0px; /* Adjust the gap between columns without large outer margins */
+        padding: 0 10px; /* Adjust padding as needed to control row spacing */
+    }
 
     #apodgalacticCenterContent {
-            margin-left: 80px;   /* Remove left margin */
-            margin-right: 80px;  /* Remove right margin */
+            margin-left: 40px;   /* Remove left margin */
+            margin-right: 0px;  /* Remove right margin */
             padding-left: 0px; /* Optional: Adjust padding to add some space inside */
             padding-right: 0px; /* Optional: Adjust padding to add some space inside */
-            max-width: 90%;    /* Ensure it takes full width of the container */
-            width: 90%;        /* Ensure it's set to 100% of available space */
+            max-width: 100%;    /* Ensure it takes full width of the container */
+            width: 95%;        /* Ensure it's set to 100% of available space */
         }
         
     
@@ -688,7 +694,7 @@ img {
         }
     
     .row {
-        margin-top: 60px;
+        margin-top: 40px;
         display: flex; /* Use flexbox for row alignment */
         justify-content: center; /* Center columns within row */
     }
