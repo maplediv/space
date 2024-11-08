@@ -96,10 +96,19 @@ html, body {
 
 
 
-.loading{
-    color: #ffffff;
-    margin-top: 40px;
-}
+    #loading-message {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 20px;
+        border-radius: 5px;
+        font-size: 18px;
+        display: none; /* Hide by default */
+        z-index: 9999; /* Make sure it's on top of other content */
+    }
 .logincontainer {
     display: inline-block;
     text-align: center;
@@ -303,7 +312,7 @@ img {
     padding-right: 50px;
 }/* Add this rule for the container-api class */
 
-@media (max-width: 393px) {
+@media (max-width: 394px) {
 
     .btn-primary{
         color: #ffffff !important;
@@ -317,7 +326,7 @@ img {
         width: 90%;
     }
     #apodgalacticCenterContent .row {
-        display: block;
+        display: block !important;
         flex-direction: row; /* Align columns side-by-side */
         justify-content: space-between;
         align-items: flex-start;
@@ -423,8 +432,17 @@ img {
     
 
     
-    @media (min-width: 394px) and (max-width: 768px)
+    @media (min-width: 395px) and (max-width: 768px)
     {
+        #apodgalacticCenterContent .row {
+            display: block !important;
+            flex-direction: row; /* Align columns side-by-side */
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-right: 0px;
+            margin-left: 0px;
+            }
+        }
         .btn-primary{
             color: #ffffff !important;
             background-color: #000000;
@@ -437,15 +455,7 @@ img {
             width: 60%;
             
         }
-    #apodgalacticCenterContent .row {
-        display: block !important;
-        flex-direction: row; /* Align columns side-by-side */
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-right: 0px;
-        margin-left: 0px;
-        }
-    }
+    
         .limited-height{
             width: 100%; /* Fill the width of the image column */
             height: auto; /* Maintain aspect ratio */

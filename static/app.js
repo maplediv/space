@@ -24,27 +24,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
-
-
-
 $(document).ready(function() {
-    $('#load-iss-btn').on('click', function() {
+    // Attach click event to the ISS nav link
+    $('.nav-link[href="/iss_location"]').on('click', function(event) {
+        console.log("ISS link clicked, loading message should appear.");  // Log to check if the event triggers
+
+        event.preventDefault();  // Prevent immediate navigation
+
         // Show the loading message
         $('#loading-message').show();
 
-        // Make the GET request to the /iss_data route
-        $.get('/iss_data', function(data) {
-            console.log(data); // Log the ISS data to the console (optional)
-
-            // Redirect to the ISS page after the data is loaded
+        // Fetch ISS data
+        $.get('/iss_location', function(data) {
+            console.log('ISS data loaded successfully');  // Log if data is fetched
             window.location.href = '/iss_location';
         }).fail(function() {
-            // If the request fails, hide the loading message and alert the user
+            console.log('Error loading ISS data');  // Log if data fails to load
             $('#loading-message').hide();
             alert('Error loading ISS data. Please try again later.');
         });
     });
 });
+
+
+
+
+
+
 
 
