@@ -11,6 +11,11 @@
     position: relative;
 }
 
+.signup{
+    margin-bottom: 40px; 
+    margin-top: 40px; 
+}
+
 .card {
 margin-bottom: 40px;
 }
