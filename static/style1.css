@@ -301,12 +301,24 @@ img {
 }/* Add this rule for the container-api class */
 
 @media (max-width: 394px) {
-    #loading-message {
-        width: 95%; /* Span nearly entire width on mobile */
-        max-width: 95%; /* Ensure max width respects mobile width */
-        padding: 15px; /* Adjust padding to fit mobile screens */
-        font-size: 16px; /* Slightly smaller font size for mobile */
+    #loading-message {  
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(137, 56, 56, 0.8);
+        color: white;
+        width: 90%; /* Span almost the entire width on mobile */
+        max-width: 500px; /* Limit maximum width for larger screens */
+        font-size: 16px; /* Adjust font size for readability */
+        padding: 10px; /* Adjust padding for mobile */
+        border-radius: 5px;
+        display: none; /* Hide by default */
+        z-index: 9999; /* Ensure it's on top */
+        text-align: center; /* Center-align text within the message */
+        box-sizing: border-box; /* Ensures padding doesn’t exceed width */
     }
+    
     .signup{
         margin-bottom: 40px; 
         margin-top: 40px; 
@@ -709,7 +721,7 @@ img {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(137, 56, 56, 0.8);
         color: white;
         padding: 20px;
         border-radius: 5px;
