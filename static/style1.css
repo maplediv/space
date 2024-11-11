@@ -10,21 +10,7 @@
     padding: 0 16px 60px;
     position: relative;
 }
-#loading-message {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 20px;
-    border-radius: 5px;
-    font-size: 18px;
-    display: none; /* Hide by default */
-    z-index: 9999; /* Make sure it's on top of other content */
-    max-width: 18%;
-    width: 50%; /* Default width for larger screens */
-}
+
 
 
 .card {
@@ -717,6 +703,22 @@ img {
 
 
 @media (min-width: 1440px)  {
+
+    #loading-message {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 20px;
+        border-radius: 5px;
+        font-size: 18px;
+        display: none; /* Hide by default */
+        z-index: 9999; /* Make sure it's on top of other content */
+        max-width: 18%;
+        width: 50%; /* Default width for larger screens */
+    }
     .content {
         margin-left: 40px;
     }
