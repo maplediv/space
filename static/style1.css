@@ -22,6 +22,8 @@
     font-size: 18px;
     display: none; /* Hide by default */
     z-index: 9999; /* Make sure it's on top of other content */
+    max-width: 18%;
+    width: 50%; /* Default width for larger screens */
 }
 
 
@@ -314,19 +316,10 @@ img {
 
 @media (max-width: 394px) {
     #loading-message {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 20px;
-        border-radius: 5px;
-        font-size: 18px;
-        display: none; /* Hide by default */
-        z-index: 9999; /* Make sure it's on top of other content */
-        max-width: 90%;
-        width: 90%;
+        width: 95%; /* Span nearly entire width on mobile */
+        max-width: 95%; /* Ensure max width respects mobile width */
+        padding: 15px; /* Adjust padding to fit mobile screens */
+        font-size: 16px; /* Slightly smaller font size for mobile */
     }
     .signup{
         margin-bottom: 40px; 
