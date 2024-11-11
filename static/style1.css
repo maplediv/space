@@ -10,11 +10,20 @@
     padding: 0 16px 60px;
     position: relative;
 }
-
-.signup{
-    margin-bottom: 40px; 
-    margin-top: 40px; 
+#loading-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    display: none; /* Hide by default */
+    z-index: 9999; /* Make sure it's on top of other content */
 }
+
 
 .card {
 margin-bottom: 40px;
@@ -100,21 +109,6 @@ html, body {
         margin-bottom: 20px !important;
     }
 
-
-
-    #loading-message {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 20px;
-        border-radius: 5px;
-        font-size: 18px;
-        display: none; /* Hide by default */
-        z-index: 9999; /* Make sure it's on top of other content */
-    }
 .logincontainer {
     display: inline-block;
     text-align: center;
@@ -319,7 +313,25 @@ img {
 }/* Add this rule for the container-api class */
 
 @media (max-width: 394px) {
-
+    #loading-message {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 20px;
+        border-radius: 5px;
+        font-size: 18px;
+        display: none; /* Hide by default */
+        z-index: 9999; /* Make sure it's on top of other content */
+        max-width: 90%;
+        width: 90%;
+    }
+    .signup{
+        margin-bottom: 40px; 
+        margin-top: 40px; 
+    }
     .footer {
         height: 80px; /* Smaller height on mobile devices */
         padding: 10px; /* Reduce padding for mobile screens */
