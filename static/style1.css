@@ -320,8 +320,8 @@ img {
     }
     
     .signup{
-        margin-bottom: 40px; 
-        margin-top: 40px; 
+        margin-bottom: 40px !important; 
+        margin-top: 40px !important; 
     }
     .footer {
         height: 80px; /* Smaller height on mobile devices */
