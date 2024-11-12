@@ -308,8 +308,8 @@ img {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: rgba(137, 56, 56, 0.8);
-        color: white;
+        background-color: rgba(0, 0, 0);
+        color: rgb(255, 255, 255);
         width: 90%; /* Span almost the entire width on mobile */
         max-width: 500px; /* Limit maximum width for larger screens */
         font-size: 16px; /* Adjust font size for readability */
@@ -723,7 +723,7 @@ img {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: rgba(137, 56, 56, 0.8);
+        background-color: rgba(0, 0, 0);
         color: white;
         padding: 20px;
         border-radius: 5px;
