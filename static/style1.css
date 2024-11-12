@@ -121,6 +121,8 @@ html, body {
     align-items: center;
     justify-content: center;
     min-height: 100vh; /* Full viewport height */
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
 }
 
 .background-container1 {
